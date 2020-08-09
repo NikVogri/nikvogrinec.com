@@ -1,0 +1,20 @@
+.footer {
+  height: 7.5rem;
+  background-color: var(--primary-color);
+
+  img,
+  a {
+    height: 2.5rem;
+    width: auto;
+  }
+
+  a:nth-last-of-type(2) {
+    margin: 0 3rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+  }
+}

@@ -1,0 +1,103 @@
+.navigation {
+  margin: 0 auto;
+  max-height: 100px;
+  width: 100%;
+  max-width: 1278px;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  top: 0;
+  left: 0;
+
+  @media only screen and (max-width: 640px) {
+    border-bottom: solid 1px var(--horizontal-ruling);
+  }
+
+
+  a {
+    color: var(--text-color)
+  }
+
+  .name {
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  .links {
+    font-size: 1.6rem;
+  }
+
+
+  .burger-menu {
+    cursor: pointer;
+    align-self: center;
+    padding: 1rem 0.25rem;
+
+    * {
+      &:nth-child(2) {
+        margin-top: 5px;
+      }
+
+      height: 2px;
+      width: 2.5rem;
+      background: var(--primary-color);
+      display: block;
+    }
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: -50rem;
+    width: 20rem;
+    position: absolute;
+    height: 100vh;
+    background: var(--primary-color);
+    transition: right .3s ease-in;
+
+    @media only screen and (min-width: 640px) {
+      display: none;
+    }
+
+    a {
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 2rem;
+      font-weight: 400;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        margin-left: 0.5rem;
+        color: var(--text-color);
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    &.open {
+      right: -1rem;
+      transition: right .3s ease-out;
+    }
+  }
+
+  .mobile-nav-background {
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: opacity .3s ease-in;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .3s ease-in;
+    }
+  }
+}
