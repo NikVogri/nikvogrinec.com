@@ -2,12 +2,12 @@ import PropTypes from "prop-types"
 import React from "react"
 import "../styles/style.css"
 import Footer from "../components/Footer"
-import Header from "../components/Header"
+import Navigation from "../components/Navigation"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
+      <Navigation />
       <div className="container">{children}</div>
       <Footer />
     </>

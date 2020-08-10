@@ -1,13 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const MobileNav = ({ links, isOpen }) => {
+const MobileNav = ({ links, isOpen, close }) => {
   return (
     <>
       <div
         className={`mobile-nav-background block sm:hidden ${
           isOpen ? "open" : ""
         }`}
+        onClick={close}
+        onKeyDown={close}
       ></div>
       <div className={`mobile-nav block sm:hidden p-8 ${isOpen ? "open" : ""}`}>
         {links.map(link => (

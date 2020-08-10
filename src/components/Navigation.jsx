@@ -2,9 +2,9 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
 import ToggleDarkSvg from "../images/toggle-dark.svg"
 import SideNavMobile from "./SideNavMobile"
-import "../styles/sass/header.scss"
+import "../styles/sass/navigation.scss"
 
-const Header = () => {
+const Navigation = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false)
 
   const mobileNavToggle = () => {
@@ -62,7 +62,7 @@ const Header = () => {
               className="cursor-pointer mr-10"
             />
             <div
-              className="burger-menu"
+              className={`burger-menu ${openMobileNav ? "open" : ""}`}
               onClick={mobileNavToggle}
               onKeyDown={mobileNavToggle}
               role="menu"
@@ -74,11 +74,15 @@ const Header = () => {
           </div>
         </div>
 
-        <SideNavMobile links={site.data.menu} isOpen={openMobileNav} />
+        <SideNavMobile
+          links={site.data.menu}
+          isOpen={openMobileNav}
+          close={() => setOpenMobileNav(false)}
+        />
       </nav>
       <hr />
     </>
   )
 }
 
-export default Header
+export default Navigation
