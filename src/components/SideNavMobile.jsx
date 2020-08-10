@@ -9,9 +9,11 @@ const MobileNav = ({ links, isOpen }) => {
           isOpen ? "open" : ""
         }`}
       ></div>
-      <div class={`mobile-nav block sm:hidden p-8 ${isOpen ? "open" : ""}`}>
+      <div className={`mobile-nav block sm:hidden p-8 ${isOpen ? "open" : ""}`}>
         {links.map(link => (
-          <Link to={link.to}>{link.name}</Link>
+          <Link key={link.name} to={link.to}>
+            {link.name}
+          </Link>
         ))}
       </div>
     </>

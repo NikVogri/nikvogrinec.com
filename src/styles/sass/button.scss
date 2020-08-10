@@ -1,0 +1,12 @@
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border: solid 3px var(--primary-button);
+  border-radius: 5px;
+  padding: 1.6rem 8rem;
+  max-width: 290px;
+
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  font-weight: 400;
+}

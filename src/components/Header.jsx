@@ -1,6 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
-import ToggleDarkSvg from "../../public/images/toggle-dark.svg"
+import ToggleDarkSvg from "../images/toggle-dark.svg"
 import SideNavMobile from "./SideNavMobile"
 import "../styles/sass/header.scss"
 
@@ -33,7 +33,7 @@ const Header = () => {
       <nav className="navigation m-0 py-4 sm:py-8 fixed sm:relative z-10">
         <div className="flex justify-between items-center px-6 sm:px-0">
           <Link to="/">
-            <p class="p-0 m-0 name">
+            <p className="p-0 m-0 name">
               Nik<span>Vogrinec</span>
             </p>
           </Link>
@@ -61,7 +61,13 @@ const Header = () => {
               title="Dark Mode"
               className="cursor-pointer mr-10"
             />
-            <div className="burger-menu" onClick={mobileNavToggle}>
+            <div
+              className="burger-menu"
+              onClick={mobileNavToggle}
+              onKeyDown={mobileNavToggle}
+              role="menu"
+              tabIndex="0"
+            >
               <span></span>
               <span></span>
             </div>

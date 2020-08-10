@@ -1,0 +1,24 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 10rem;
+  display: inline-block;
+  font-size: 2.4rem;
+  position: relative;
+  color: var(--text-color);
+
+  @media only screen and (max-width: 640px) {
+    margin-bottom: 6rem;
+  }
+
+
+  &::before {
+    z-index: -1;
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: rgba(47, 128, 237, 0.45);
+    position: absolute;
+    bottom: 0.25rem;
+    left: 1rem;
+  }
+}

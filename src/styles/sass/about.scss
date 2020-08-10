@@ -1,0 +1,36 @@
+.about {
+  min-height: 100vh;
+
+  &-long {
+    font-weight: 400;
+    line-height: 45px;
+    font-size: 1.8rem;
+    color: var(--text-color);
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  ul {
+    margin-top: 6rem;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        margin-left: 1rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .button-container {
+    margin-top: 10rem;
+  }
+}

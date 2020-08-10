@@ -1,5 +1,5 @@
 .footer {
-  height: 7.5rem;
+  // height: 7.5rem;
   background-color: var(--primary-color);
 
   img,
@@ -17,4 +17,8 @@
     font-weight: 300;
     color: var(--secondary-color);
   }
+
+  // @media only screen and (max-width: 768) {
+  //   height: 12rem;
+  // }
 }
