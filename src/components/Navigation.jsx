@@ -1,11 +1,16 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useState } from "react"
-import ToggleDarkSvg from "../images/toggle-dark.svg"
+import React, { useState, useEffect } from "react"
+
 import SideNavMobile from "./SideNavMobile"
+
+import ToggleDarkSvg from "../images/toggle-dark.svg"
+import ToggleLightSvg from "../images/toggle-light.svg"
+
 import "../styles/sass/navigation.scss"
 
 const Navigation = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false)
+  const [darkMode, setDarkMode] = useState(false)
 
   const mobileNavToggle = () => {
     !openMobileNav
@@ -13,6 +18,28 @@ const Navigation = () => {
       : (document.body.style = "overflow-x: hidden;")
 
     setOpenMobileNav(!openMobileNav)
+  }
+
+  useEffect(() => {
+    const darkModeEnabled = localStorage.getItem("dark-mode")
+
+    if (darkModeEnabled) {
+      document.body.classList.add("dark-mode")
+      document.body.classList.remove("light-mode")
+    }
+  }, [])
+
+  const toggleDarkMode = () => {
+    if (!darkMode) {
+      localStorage.setItem("dark-mode", true)
+    } else {
+      localStorage.removeItem("dark-mode")
+    }
+
+    setDarkMode(!darkMode)
+    document.body.classList.toggle("dark-mode")
+    document.body.classList.toggle("light-mode")
+    console.log("here")
   }
 
   const { site } = useStaticQuery(graphql`
@@ -48,18 +75,20 @@ const Navigation = () => {
               </Link>
             ))}
             <img
-              src={ToggleDarkSvg}
+              src={darkMode ? ToggleDarkSvg : ToggleLightSvg}
               alt="toggles dark mode"
-              title="Dark Mode"
+              title={darkMode ? "Toggle Dark Mode" : "Toggle Light Mode"}
               className="ml-6 sm:ml-8 cursor-pointer"
+              onClick={toggleDarkMode}
             />
           </div>
           <div className="block sm:hidden flex align-center">
             <img
-              src={ToggleDarkSvg}
+              src={darkMode ? ToggleDarkSvg : ToggleLightSvg}
               alt="toggles dark mode"
-              title="Dark Mode"
+              title={darkMode ? "Toggle Dark Mode" : "Toggle Light Mode"}
               className="cursor-pointer mr-10"
+              onClick={toggleDarkMode}
             />
             <div
               className={`burger-menu ${openMobileNav ? "open" : ""}`}

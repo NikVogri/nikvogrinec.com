@@ -1,6 +1,5 @@
 .footer {
-  // height: 7.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-background);
 
   img,
   a {
@@ -18,7 +17,4 @@
     color: var(--secondary-color);
   }
 
-  // @media only screen and (max-width: 768) {
-  //   height: 12rem;
-  // }
 }

@@ -4,9 +4,10 @@
   width: 100%;
   max-width: 1278px;
   color: var(--text-color);
-  background-color: var(--secondary-color);
   top: 0;
   left: 0;
+  transition: background-color .5s ease-in-out;
+  background-color: var(--background-color);
 
   @media only screen and (max-width: 640px) {
     border-bottom: solid 1px var(--horizontal-ruling);
@@ -78,7 +79,7 @@
     width: 20rem;
     position: absolute;
     height: 100vh;
-    background: var(--primary-color);
+    background: var(--secondary-background);
     transition: right .3s ease-in;
 
     @media only screen and (min-width: 640px) {

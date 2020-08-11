@@ -14,7 +14,7 @@ const BlogCards = () => {
       <Title title="Check out my blog" />
       <div className="grid md:grid-cols-3 gap-12">
         {/* card */}
-        <div className="shadow-md rounded-lg overflow-hidden">
+        <div className="shadow-md rounded-lg overflow-hidden card">
           <div className="card-image-container">
             <Link to="#">
               <img src={PlaceholderImage} alt="blog" className="w-full" />
@@ -32,9 +32,11 @@ const BlogCards = () => {
         </div>
         {/* card */}
         {/* card */}
-        <div className="shadow-md rounded-lg overflow-hidden">
+        <div className="shadow-md rounded-lg overflow-hidden card">
           <div className="card-image-container">
-            <img src={PlaceholderImage} alt="blog" className="w-full" />
+            <Link to="#">
+              <img src={PlaceholderImage} alt="blog" className="w-full" />
+            </Link>
           </div>
           <div className="card-info p-8">
             <Link to="#">
@@ -48,9 +50,11 @@ const BlogCards = () => {
         </div>
         {/* card */}
         {/* card */}
-        <div className="shadow-md rounded-lg overflow-hidden">
+        <div className="shadow-md rounded-lg overflow-hidden card">
           <div className="card-image-container">
-            <img src={PlaceholderImage} alt="blog" className="w-full" />
+            <Link to="#">
+              <img src={PlaceholderImage} alt="blog" className="w-full" />
+            </Link>
           </div>
           <div className="card-info p-8">
             <Link to="#">

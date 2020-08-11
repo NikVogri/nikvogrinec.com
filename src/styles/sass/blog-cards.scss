@@ -1,34 +1,44 @@
 .blog-cards {
   min-height: 100vh;
 
-  .card-info {
+  .card {
+    transition: transform .3s ease-in-out;
 
-    color: var(--text-color);
-
-    h4 {
-      font-size: 2.4rem;
-      font-weight: 500;
+    &:hover {
+      transition: transform .3s ease-in-out;
+      transform: scale(1.03);
     }
 
-    span {
-      font-size: 1.2rem;
-      position: relative;
+    .card-info {
+      color: var(--text-color);
 
-      &::before {
-        content: "";
-        height: 2px;
-        background-color: var(--primary-color);
-        width: 100%;
-        position: absolute;
-        left: 0;
-        bottom: -0.5rem;
+      h4 {
+        color: var(--text-color);
+        font-size: 2.4rem;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 1.2rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          height: 2px;
+          background-color: var(--primary-color);
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -0.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 24px;
       }
     }
 
-    p {
-      font-size: 1.4rem;
-      line-height: 24px;
-    }
   }
 
   .button-container {
