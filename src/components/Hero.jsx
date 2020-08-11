@@ -13,8 +13,8 @@ const Hero = () => {
   `)
 
   return (
-    <section className="hero py-16 md:py-0">
-      <div className="md:flex items-center mt-16">
+    <section className="hero py-16 md:py-0" id="hero">
+      <div className="md:flex items-center mt-8 md:mt-16">
         <div className="md:w-1/2 w-full">
           <h1>
             <span className="block">Welcome, welcome, welcome!</span>I design &
@@ -26,7 +26,7 @@ const Hero = () => {
           <img src={heroImage} alt="hero" className="md:float-right" />
         </div>
       </div>
-      <div className="hero-long mt-16">
+      <div className="hero-long mt-8  md:mt-16">
         <p>
           Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
           Phasellus non metus eleifend, vehicula magna nec, malesuada mauris.

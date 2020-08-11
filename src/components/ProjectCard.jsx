@@ -3,7 +3,7 @@ import ListSvg from "../images/icons/list.svg"
 
 const ProjectCard = ({ icon, name, description }) => {
   return (
-    <div class="projects-card flex ">
+    <div className="projects-card flex ">
       <div>
         <img src={ListSvg} alt="list icon" className="mr-12" />
       </div>

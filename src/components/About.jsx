@@ -14,7 +14,7 @@ const About = () => {
     <section className="about  py-16 md:py-0" id="about">
       <Title title="Get to know me" />
       <div className="about-long mb-5">
-        <p>
+        <p className="mt-0">
           Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
           Phasellus non metus eleifend, vehicula magna nec, malesuada mauris.
           Nunc quam turpis, suscipit quis eros at, egestas aliquet nisi. Duis
@@ -37,7 +37,7 @@ const About = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="myresume.com">
             {" "}
             <img src={ResumeBlue} alt="resume" /> <p>Resume(PDF)</p>
           </a>
@@ -45,7 +45,7 @@ const About = () => {
       </ul>
 
       <div className="text-center button-container">
-        <Button text="Send me an email" link="#" />
+        <Button text="Send me an email" link="mailto:vogrinec.nik@gmail.com" />
         <p className="text-2xl mt-12 font-light">
           For business inquiries or if you have a question, please feel free to
           email me any time. I’ll try to respond as soon as I can

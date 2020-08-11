@@ -1,0 +1,41 @@
+.blog-cards {
+  min-height: 100vh;
+
+  .card-info {
+
+    color: var(--text-color);
+
+    h4 {
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 1.2rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 2px;
+        background-color: var(--primary-color);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 24px;
+    }
+  }
+
+  .button-container {
+    margin-top: 10rem;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 6rem;
+    }
+  }
+}

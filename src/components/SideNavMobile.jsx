@@ -10,6 +10,7 @@ const MobileNav = ({ links, isOpen, close }) => {
         }`}
         onClick={close}
         onKeyDown={close}
+        role="window"
       ></div>
       <div className={`mobile-nav block sm:hidden p-8 ${isOpen ? "open" : ""}`}>
         {links.map(link => (

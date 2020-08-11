@@ -77,7 +77,7 @@ const Navigation = () => {
         <SideNavMobile
           links={site.data.menu}
           isOpen={openMobileNav}
-          close={() => setOpenMobileNav(false)}
+          close={() => mobileNavToggle()}
         />
       </nav>
       <hr />
