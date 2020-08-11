@@ -24,10 +24,13 @@ const Navigation = () => {
     const darkModeEnabled = localStorage.getItem("dark-mode")
 
     if (darkModeEnabled) {
+      setDarkMode(true)
       document.body.classList.add("dark-mode")
       document.body.classList.remove("light-mode")
+    } else {
+      document.body.classList.add("light-mode")
     }
-  }, [])
+  }, [darkMode])
 
   const toggleDarkMode = () => {
     if (!darkMode) {
@@ -75,7 +78,7 @@ const Navigation = () => {
               </Link>
             ))}
             <img
-              src={darkMode ? ToggleDarkSvg : ToggleLightSvg}
+              src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
               alt="toggles dark mode"
               title={darkMode ? "Toggle Dark Mode" : "Toggle Light Mode"}
               className="ml-6 sm:ml-8 cursor-pointer"
@@ -84,7 +87,7 @@ const Navigation = () => {
           </div>
           <div className="block sm:hidden flex align-center">
             <img
-              src={darkMode ? ToggleDarkSvg : ToggleLightSvg}
+              src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
               alt="toggles dark mode"
               title={darkMode ? "Toggle Dark Mode" : "Toggle Light Mode"}
               className="cursor-pointer mr-10"
