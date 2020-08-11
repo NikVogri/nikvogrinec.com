@@ -1,6 +1,5 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useState, useEffect } from "react"
-
 import SideNavMobile from "./SideNavMobile"
 
 import ToggleDarkSvg from "../images/toggle-dark.svg"
@@ -22,7 +21,6 @@ const Navigation = () => {
 
   useEffect(() => {
     const darkModeEnabled = localStorage.getItem("dark-mode")
-
     if (darkModeEnabled) {
       setDarkMode(true)
       document.body.classList.add("dark-mode")

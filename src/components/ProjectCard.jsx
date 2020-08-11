@@ -8,7 +8,7 @@ const ProjectCard = ({ icon, name, description }) => {
         <img src={ListSvg} alt="list icon" className="mr-12" />
       </div>
       <div>
-        <h4 className="m-0">Freecourso</h4>
+        <p className="m-0 project-title">Freecourso</p>
         <p className="m-0 mt-2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
           dapibus dui. Nulla in diam ac ex consequat finibus vel efficitur dui.

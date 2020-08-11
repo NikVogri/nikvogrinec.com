@@ -7,6 +7,8 @@ import Projects from "../components/Projects"
 import About from "../components/About"
 import BlogCards from "../components/BlogCards"
 
+import SiteMetadata from "../components/SiteMetadata.jsx"
+
 import "../styles/sass/index.scss"
 // import BackgroundShapeCube from "../../public/images/shapes/shape-bg-cube.svg"
 // import BackgroundShapeDotsSquare from "../../public/images/shapes/background-shape-dots-square.svg"
@@ -15,6 +17,10 @@ import "../styles/sass/index.scss"
 const IndexPage = () => {
   return (
     <Layout>
+      <SiteMetadata
+        title="Nik Vogrinec Portfolio"
+        description="Portfolio for full stack web developer Nik Vogrinec located in Slovenia."
+      />
       <Hero />
       <Projects />
       <About />

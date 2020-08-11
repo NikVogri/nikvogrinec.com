@@ -22,7 +22,7 @@ const BlogCards = () => {
           </div>
           <div className="card-info p-8">
             <Link to="#">
-              <h4 className="my-4">Your First Five React Projects</h4>
+              <p className="my-4 card-title">Your First Five React Projects</p>
             </Link>
             <span>August 17, 2020</span>
             <p className="my-12">
@@ -40,7 +40,7 @@ const BlogCards = () => {
           </div>
           <div className="card-info p-8">
             <Link to="#">
-              <h4 className="my-4">Your First Five React Projects</h4>
+              <p className="my-4 card-title">Your First Five React Projects</p>
             </Link>
             <span>August 17, 2020</span>
             <p className="my-12">
@@ -58,7 +58,7 @@ const BlogCards = () => {
           </div>
           <div className="card-info p-8">
             <Link to="#">
-              <h4 className="my-4">Your First Five React Projects</h4>
+              <p className="my-4 card-title">Your First Five React Projects</p>
             </Link>
             <span>August 17, 2020</span>
             <p className="my-12">

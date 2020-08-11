@@ -36,7 +36,7 @@ module.exports = {
     ],
     locale: "en",
     title: `Nik Vogrinec Portfolio`,
-    description: `Nik Vogrinec Portfolio`,
+    description: `Portfolio for full stack web developer Nik Vogrinec located in Slovenia.`,
     author: `@nikvogrinec`,
   },
   plugins: [
