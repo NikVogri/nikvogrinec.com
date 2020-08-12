@@ -123,4 +123,49 @@
       transition: opacity .3s ease-in;
     }
   }
+
+  .toggler {
+    &.light-toggled {
+      animation: lightModeToggledIn .5s ease-in-out;
+    }
+
+    &.dark-toggled {
+      animation: darkModeToggledIn .5s ease-in-out;
+    }
+  }
+}
+
+
+
+
+
+@keyframes lightModeToggledIn {
+  0% {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
+@keyframes darkModeToggledIn {
+  0% {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
