@@ -9,7 +9,6 @@ import BlogCards from "../components/BlogCards"
 
 import SiteMetadata from "../components/SiteMetadata.jsx"
 
-import "../styles/sass/index.scss"
 // import BackgroundShapeCube from "../../public/images/shapes/shape-bg-cube.svg"
 // import BackgroundShapeDotsSquare from "../../public/images/shapes/background-shape-dots-square.svg"
 // import Dodecahedron from "../../public/images/shapes/dodecahedron.svg"

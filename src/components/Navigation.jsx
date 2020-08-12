@@ -90,8 +90,10 @@ const Navigation = () => {
             <img
               src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
               alt="toggles dark mode"
-              title={darkMode ? "Toggle Dark Mode" : "Toggle Light Mode"}
-              className="cursor-pointer mr-10"
+              title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+              className={`ml-6 sm:ml-8 cursor-pointer mr-10 toggler ${
+                darkMode ? "dark-toggled" : "light-toggled"
+              }`}
               onClick={toggleDarkMode}
             />
             <div

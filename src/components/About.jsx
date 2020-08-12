@@ -11,7 +11,7 @@ import "../styles/sass/about.scss"
 
 const About = () => {
   return (
-    <section className="about  py-16 md:py-0" id="about">
+    <section className="about  py-16 md:py-0 relative" id="about">
       <Title title="Get to know me" />
       <div className="about-long mb-5">
         <p className="mt-0">

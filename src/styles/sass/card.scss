@@ -1,0 +1,33 @@
+  .card {
+
+    .card-info {
+      color: var(--text-color);
+
+      .card-title {
+        color: var(--text-color);
+        font-size: 2.4rem;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 1.2rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          height: 2px;
+          background-color: var(--primary-color);
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -0.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 24px;
+      }
+    }
+
+  }

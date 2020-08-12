@@ -41,30 +41,42 @@
       color: var(--primary-color);
     }
   }
+
+
+  @mixin bgDefault() {
+    position: absolute;
+    width: auto;
+    z-index: -1;
+  }
+
+  .bg-shape {
+    &-1 {
+      @include bgDefault();
+      height: 30vh;
+      top: 20%;
+      left: 75%;
+    }
+
+    &-2 {
+      @include bgDefault();
+      height: 30vh;
+      top: 20%;
+      left: 75%;
+    }
+
+    &-3 {
+      @include bgDefault();
+      height: 50vw;
+      bottom: -30vh;
+      left: 100%;
+    }
+
+    &-4 {
+      @include bgDefault();
+      height: 40vw;
+      bottom: -50vh;
+      right: 100%;
+    }
+  }
+
 }
-
-
-// .bg-shape {
-//   position: absolute;
-//   z-index: -1;
-
-
-//   &:nth-of-type(1) {
-//     left: 35%;
-//   }
-
-//   &:nth-of-type(2) {
-//     bottom: 10%;
-//     right: 20%;
-//   }
-
-//   &:nth-of-type(3) {
-//     top: 50%;
-//     right: -30%;
-//   }
-
-//   &:nth-of-type(4) {
-//     top: 70%;
-//     left: -30%;
-//   }
-// }

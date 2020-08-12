@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 
 import Title from "./Title"
 import Button from "./Button"
-
+import BlogCard from "./BlogCard"
 import PlaceholderImage from "../images/react_wallpaper.jpg"
 
 import "../styles/sass/blog-cards.scss"
+import "../styles/sass/card.scss"
 
 const BlogCards = () => {
   return (
@@ -14,58 +15,31 @@ const BlogCards = () => {
       <Title title="Check out my blog" />
       <div className="grid md:grid-cols-3 gap-12">
         {/* card */}
-        <div className="shadow-md rounded-lg overflow-hidden card">
-          <div className="card-image-container">
-            <Link to="#">
-              <img src={PlaceholderImage} alt="blog" className="w-full" />
-            </Link>
-          </div>
-          <div className="card-info p-8">
-            <Link to="#">
-              <p className="my-4 card-title">Your First Five React Projects</p>
-            </Link>
-            <span>August 17, 2020</span>
-            <p className="my-12">
-              Five Begginer to Intermidiate Friendly Projects You Should Make
-            </p>
-          </div>
-        </div>
+        <BlogCard
+          title="Your First Five React Projects"
+          image={PlaceholderImage}
+          date="August 17, 2020"
+          description="Five Begginer to Intermidiate Friendly Projects You Should Make"
+          link="#"
+        />
         {/* card */}
         {/* card */}
-        <div className="shadow-md rounded-lg overflow-hidden card">
-          <div className="card-image-container">
-            <Link to="#">
-              <img src={PlaceholderImage} alt="blog" className="w-full" />
-            </Link>
-          </div>
-          <div className="card-info p-8">
-            <Link to="#">
-              <p className="my-4 card-title">Your First Five React Projects</p>
-            </Link>
-            <span>August 17, 2020</span>
-            <p className="my-12">
-              Five Begginer to Intermidiate Friendly Projects You Should Make
-            </p>
-          </div>
-        </div>
+        <BlogCard
+          title="Your First Five React Projects"
+          image={PlaceholderImage}
+          date="August 17, 2020"
+          description="Five Begginer to Intermidiate Friendly Projects You Should Make"
+          link="#"
+        />
         {/* card */}
         {/* card */}
-        <div className="shadow-md rounded-lg overflow-hidden card">
-          <div className="card-image-container">
-            <Link to="#">
-              <img src={PlaceholderImage} alt="blog" className="w-full" />
-            </Link>
-          </div>
-          <div className="card-info p-8">
-            <Link to="#">
-              <p className="my-4 card-title">Your First Five React Projects</p>
-            </Link>
-            <span>August 17, 2020</span>
-            <p className="my-12">
-              Five Begginer to Intermidiate Friendly Projects You Should Make
-            </p>
-          </div>
-        </div>
+        <BlogCard
+          title="Your First Five React Projects"
+          image={PlaceholderImage}
+          date="August 17, 2020"
+          description="Five Begginer to Intermidiate Friendly Projects You Should Make"
+          link="#"
+        />
         {/* card */}
       </div>
 

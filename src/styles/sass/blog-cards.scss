@@ -1,45 +1,5 @@
 .blog-cards {
-  min-height: 100vh;
-
-  .card {
-    transition: transform .3s ease-in-out;
-
-    &:hover {
-      transition: transform .3s ease-in-out;
-      transform: scale(1.03);
-    }
-
-    .card-info {
-      color: var(--text-color);
-
-      .card-title {
-        color: var(--text-color);
-        font-size: 2.4rem;
-        font-weight: 500;
-      }
-
-      span {
-        font-size: 1.2rem;
-        position: relative;
-
-        &::before {
-          content: "";
-          height: 2px;
-          background-color: var(--primary-color);
-          width: 100%;
-          position: absolute;
-          left: 0;
-          bottom: -0.5rem;
-        }
-      }
-
-      p {
-        font-size: 1.4rem;
-        line-height: 24px;
-      }
-    }
-
-  }
+  padding-bottom: 10rem;
 
   .button-container {
     margin-top: 10rem;

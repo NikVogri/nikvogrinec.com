@@ -39,9 +39,6 @@ body.light-mode {
   --secondary-background: #2F80ED;
 }
 
-
-
-
 hr {
   border: solid 1px var(--horizontal-ruling);
   margin: 0;
