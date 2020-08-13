@@ -1,6 +1,10 @@
 .blog-cards {
   padding-bottom: 10rem;
 
+  @media only screen and (max-width: 768px) {
+    padding: 3.5 0 5rem 0;
+  }
+
   .button-container {
     margin-top: 10rem;
 

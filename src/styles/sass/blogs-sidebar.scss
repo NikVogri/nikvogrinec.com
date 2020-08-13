@@ -1,0 +1,36 @@
+.blogs-sidebar {
+  padding: 0rem 1rem;
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-bottom: solid 1px var(--horizontal-ruling);
+    border-top: solid 1px var(--horizontal-ruling);
+    color: var(--text-color);
+  }
+
+  ul {
+    border-bottom: solid 1px var(--horizontal-ruling);
+
+    li {
+      margin: 1rem 0;
+
+      a {
+        font-size: 1.6rem;
+        color: var(--text-color);
+
+
+
+        span {
+          transition: margin .1s ease-out;
+        }
+
+        &:hover>span {
+          transition: margin .1s ease-in;
+          display: inline-block;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}

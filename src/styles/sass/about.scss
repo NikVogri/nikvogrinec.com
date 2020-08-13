@@ -1,5 +1,10 @@
 .about {
-  min-height: 100vh;
+
+  padding: 7.5rem 0;
+
+  @media only screen and (max-width: 768px) {
+    padding: 3.5rem 0;
+  }
 
   &-long {
     font-weight: 400;

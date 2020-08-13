@@ -46,7 +46,7 @@ const About = () => {
 
       <div className="text-center button-container">
         <Button text="Send me an email" link="mailto:vogrinec.nik@gmail.com" />
-        <p className="text-2xl mt-12 font-light">
+        <p className="md:text-2xl mt-12 font-light">
           For business inquiries or if you have a question, please feel free to
           email me any time. I’ll try to respond as soon as I can
         </p>

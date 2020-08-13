@@ -44,7 +44,7 @@ const BlogCards = () => {
       </div>
 
       <div className="text-center button-container">
-        <Button text="View All" link="/blog" />
+        <Button text="View All" link="/blogs" />
       </div>
     </section>
   )

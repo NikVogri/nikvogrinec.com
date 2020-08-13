@@ -1,0 +1,41 @@
+  .blogs-header {
+    text-align: center;
+
+
+    @media only screen and (max-width: 768px) {
+      padding-top: 5rem;
+    }
+
+
+    h1 {
+      font-size: 3.2rem;
+      display: inline-block;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+
+      position: relative;
+      z-index: 1;
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        bottom: -0.2rem;
+        height: 2rem;
+        z-index: -1;
+        width: 100%;
+        background-color: rgba(47, 128, 237, 0.45);
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 5rem;
+      color: var(--text-color);
+
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
