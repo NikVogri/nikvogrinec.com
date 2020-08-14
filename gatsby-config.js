@@ -13,6 +13,7 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     menu: [
+      { name: "HOME", to: "/" },
       { name: "PROJECTS", to: "/#projects" },
       { name: "ABOUT", to: "/#about" },
       { name: "BLOGS", to: "/blogs" },

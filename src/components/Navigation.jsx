@@ -28,6 +28,8 @@ const Navigation = () => {
     } else {
       document.body.classList.add("light-mode")
     }
+    // Remove scroll lock when another page gets loaded
+    document.body.style = "overflow-x: hidden;"
   }, [darkMode])
 
   const toggleDarkMode = () => {

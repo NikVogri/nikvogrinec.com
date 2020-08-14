@@ -62,3 +62,17 @@ a {
     width: 92vw;
   }
 }
+
+
+@media only screen and (max-width: 640px) {
+
+  #about,
+  #projects,
+  #blog {
+    border-top: 6.5rem solid transparent;
+    margin: -6.5rem 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+}

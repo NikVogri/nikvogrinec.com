@@ -11,7 +11,11 @@ const ProjectCard = ({ icon, name, description, urls }) => {
         <p className="m-0 project-title">{name}</p>
         <p className="m-0 mt-2">{description}</p>
         {urls.map(url => (
-          <a href={url.url} class="project-links mr-4 block mt-4">
+          <a
+            href={url.url}
+            key={url.name}
+            className="project-links mr-4 block mt-4"
+          >
             &gt; {url.name}
           </a>
         ))}
