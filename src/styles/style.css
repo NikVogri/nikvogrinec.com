@@ -17,7 +17,7 @@ body.dark-mode {
   transition: all .5s ease-in-out;
   --primary-color: #2F80ED;
   --text-color: #fff;
-  --bg-shape: rgba(255, 255, 255, 0.05);
+  --bg-shape: rgba(255, 255, 255, 0.2);
   --horizontal-ruling: rgba(255, 255, 255, 0.05);
   --primary-button: rgba(47, 128, 237, 1);
   --background-color: #1B1B2F;
@@ -31,7 +31,7 @@ body.light-mode {
   --primary-color: #2F80ED;
   --secondary-color: #fff;
   --text-color: #333333;
-  --bg-shape: rgba(0, 0, 0, 0.05);
+  --bg-shape: #0000000d;
   --shape-opacity: 0.05;
   --horizontal-ruling: rgba(87, 88, 90, 0.05);
   --primary-button: rgba(47, 128, 237, 0.5);
@@ -63,6 +63,17 @@ a {
   }
 }
 
+.test {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+  opacity: 0.15;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
 
 @media only screen and (max-width: 640px) {
 

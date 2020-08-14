@@ -10,15 +10,17 @@ const ProjectCard = ({ icon, name, description, urls }) => {
       <div>
         <p className="m-0 project-title">{name}</p>
         <p className="m-0 mt-2">{description}</p>
-        {urls.map(url => (
-          <a
-            href={url.url}
-            key={url.name}
-            className="project-links mr-4 block mt-4"
-          >
-            &gt; {url.name}
-          </a>
-        ))}
+        <div class="inline-flex flex-col">
+          {urls.map(url => (
+            <a
+              href={url.url}
+              key={url.name}
+              className="project-links mr-4 mt-4 inline-block project-link"
+            >
+              &gt; {url.name}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   )

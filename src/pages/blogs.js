@@ -9,16 +9,19 @@ import PlaceholderImage from "../images/react_wallpaper.jpg"
 
 import Layout from "../layouts/Layout"
 
+import bgFade from "../images/shapes/bg-fade.svg"
+
 import "../styles/sass/blog.scss"
 
-const IndexPage = () => {
+const BlogPage = () => {
   return (
     <Layout>
       <SiteMetadata
         title="Blogs | Nik Vogrinec"
         description="Check out my blogs on web development. I make a blog whenever I feel like it!"
       />
-      <header className="blogs-header md:mt-20">
+      <header className="blogs-header relative md:pt-20">
+        <img src={bgFade} alt="test" className="test" />
         <h1>My Blog</h1>
         <p>
           Mostly whatever is on my mind mixed with web development tips and
@@ -58,4 +61,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default BlogPage

@@ -1,6 +1,13 @@
   .blogs-header {
     text-align: center;
 
+    padding-bottom: 5rem;
+
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 0;
+      margin-bottom: 1rem;
+    }
+
 
     @media only screen and (max-width: 768px) {
       padding-top: 5rem;
@@ -31,11 +38,6 @@
 
     p {
       font-size: 1.6rem;
-      margin-bottom: 5rem;
       color: var(--text-color);
-
-      @media only screen and (max-width: 768px) {
-        margin-bottom: 1rem;
-      }
     }
   }
