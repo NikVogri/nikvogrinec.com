@@ -16,7 +16,7 @@ module.exports = {
       { name: "HOME", to: "/" },
       { name: "PROJECTS", to: "/#projects" },
       { name: "ABOUT", to: "/#about" },
-      { name: "BLOGS", to: "/blogs" },
+      { name: "BLOG", to: "/blog" },
     ],
     links: [
       {

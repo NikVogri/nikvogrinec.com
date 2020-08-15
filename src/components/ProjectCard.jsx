@@ -10,7 +10,7 @@ const ProjectCard = ({ icon, name, description, urls }) => {
       <div>
         <p className="m-0 project-title">{name}</p>
         <p className="m-0 mt-2">{description}</p>
-        <div class="inline-flex flex-col">
+        <div className="inline-flex flex-col">
           {urls.map(url => (
             <a
               href={url.url}

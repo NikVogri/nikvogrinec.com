@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import "../styles/sass/blogs-sidebar.scss"
 
@@ -8,29 +9,29 @@ const BlogsAside = () => {
       <p className="py-3 m-0">Categories</p>
       <ul className="list-none m-0 p-0">
         <li>
-          <a href="/blogs/html">
+          <Link to="/blog/html">
             &gt; <span>HTML</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/blogs/css">
+          <Link to="/blog/css">
             &gt; <span>CSS</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/blogs/sass">
+          <Link to="/blog/sass">
             &gt; <span>SASS</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/blogs/react">
+          <Link to="/blog/react">
             &gt; <span>REACT</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/blogs/laravel">
+          <Link to="/blog/laravel">
             &gt; <span>LARAVEL</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </aside>

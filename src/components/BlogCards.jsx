@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Title from "./Title"
 import Button from "./Button"
@@ -11,42 +11,49 @@ import "../styles/sass/card.scss"
 
 const BlogCards = () => {
   return (
-    <section className="blog-cards py-16" id="blog-cards">
-      <Title title="Check out my blog" />
-      <div className="grid md:grid-cols-3 gap-12">
-        {/* card */}
-        <BlogCard
-          title="Your First Five React Projects"
-          image={PlaceholderImage}
-          date="August 17, 2020"
-          description="Five Begginer to Intermidiate Friendly Projects You Should Make"
-          link="#"
-        />
-        {/* card */}
-        {/* card */}
-        <BlogCard
-          title="Your First Five React Projects"
-          image={PlaceholderImage}
-          date="August 17, 2020"
-          description="Five Begginer to Intermidiate Friendly Projects You Should Make"
-          link="#"
-        />
-        {/* card */}
-        {/* card */}
-        <BlogCard
-          title="Your First Five React Projects"
-          image={PlaceholderImage}
-          date="August 17, 2020"
-          description="Five Begginer to Intermidiate Friendly Projects You Should Make"
-          link="#"
-        />
-        {/* card */}
-      </div>
+    <StaticQuery
+      query={graphql`
+        query MyQuery {
+          allContentfulBlog(limit: 3) {
+            edges {
+              node {
+                slug
+                title
+                excerpt {
+                  excerpt
+                }
+                date(formatString: "DD.MM.YYYY")
+                headingImage {
+                  file {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={({ allContentfulBlog: { edges } }) => (
+        <section className="blog-cards py-16" id="blog-cards">
+          <Title title="Check out my blog" />
+          <div className="grid md:grid-cols-3 gap-12">
+            {edges.map(({ node }) => (
+              <BlogCard
+                title={node.title}
+                image={node.headingImage.file.url}
+                date={node.date}
+                description={node.excerpt.excerpt}
+                link={`/blog/${node.slug}`}
+              />
+            ))}
+          </div>
 
-      <div className="text-center button-container">
-        <Button text="View All" link="/blogs" />
-      </div>
-    </section>
+          <div className="text-center button-container">
+            <Button text="View All" link="/blog" />
+          </div>
+        </section>
+      )}
+    />
   )
 }
 

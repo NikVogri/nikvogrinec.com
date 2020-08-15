@@ -1,34 +1,26 @@
 const path = require(`path`)
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const { data } = await graphql(`
+    query {
+      allContentfulBlog {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
 
-//   return new Promise((resolve, reject) => {
-//     graphql(`
-//       {
-//         portfolio: allContentfulPortfolio {
-//           nodes {
-//             slug
-//           }
-//         }
-//       }
-//     `).then(({ errors, data }) => {
-//       if (errors) {
-//         reject(errors)
-//       }
-
-//       if (data && data.portfolio) {
-//         const component = path.resolve("./src/templates/portfolio-item.jsx")
-//         data.portfolio.nodes.map(({ slug }) => {
-//           createPage({
-//             path: `/${slug}`,
-//             component,
-//             context: { slug },
-//           })
-//         })
-//       }
-
-//       resolve()
-//     })
-//   })
-// }
+  data.allContentfulBlog.edges.forEach(({ node }) => {
+    createPage({
+      path: `/blog/${node.slug}`,
+      component: path.resolve("./src/templates/blogTemplate.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+}

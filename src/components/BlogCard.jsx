@@ -17,7 +17,7 @@ const BlogCard = ({ title, image, date, description, link, className }) => {
         </Link>
         <span className="mt-3 inline-block">{date}</span>
         <p className="my-12">{description}</p>
-        <Link to="#">&gt; Read More</Link>
+        <Link to={link}>&gt; Read More...</Link>
       </div>
     </div>
   )
