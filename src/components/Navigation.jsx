@@ -77,28 +77,42 @@ const Navigation = () => {
               </Link>
             ))}
 
-            <img
-              src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
-              alt="toggles dark mode"
-              title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
-              className={`ml-6 sm:ml-8 cursor-pointer toggler ${
-                darkMode ? "dark-toggled" : "light-toggled"
-              }`}
+            <button
+              tabIndex="0"
               onClick={toggleDarkMode}
-            />
+              onKeyPress={toggleDarkMode}
+              className={`ml-6 sm:ml-8 outline-none bg-transparent border-none inline-block p-0`}
+            >
+              <img
+                src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
+                alt="toggles dark mode"
+                title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+                className={` cursor-pointer toggler ${
+                  darkMode ? "dark-toggled" : "light-toggled"
+                }`}
+              />
+            </button>
           </div>
           <div className="block sm:hidden flex align-center">
-            <img
-              src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
-              alt="toggles dark mode"
-              title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
-              className={`ml-6 sm:ml-8 cursor-pointer mr-10 toggler ${
-                darkMode ? "dark-toggled" : "light-toggled"
-              }`}
+            <button
+              tabIndex="0"
               onClick={toggleDarkMode}
-            />
+              onKeyPress={toggleDarkMode}
+              className={`ml-6 sm:ml-8 outline-none bg-transparent border-none inline-block p-0`}
+            >
+              <img
+                src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
+                alt="toggles dark mode"
+                title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+                className={`cursor-pointer mr-10 toggler outline-none  ${
+                  darkMode ? "dark-toggled" : "light-toggled"
+                }`}
+              />
+            </button>
             <div
-              className={`burger-menu ${openMobileNav ? "open" : ""}`}
+              className={`burger-menu outline-none ${
+                openMobileNav ? "open" : ""
+              }`}
               onClick={mobileNavToggle}
               onKeyDown={mobileNavToggle}
               role="menu"

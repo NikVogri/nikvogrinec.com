@@ -64,11 +64,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe`,
-        short_name: `johndoe`,
+        name: `Nik Vogrinec Portfolio Site`,
+        short_name: `nikvogrinecportfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#3182ce`,
+        theme_color: `#2f80ed`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
       },

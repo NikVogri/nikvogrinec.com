@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Title from "./Title"
 import Button from "./Button"
 import BlogCard from "./BlogCard"
-import PlaceholderImage from "../images/react_wallpaper.jpg"
 
 import "../styles/sass/blog-cards.scss"
 import "../styles/sass/card.scss"
@@ -39,6 +38,7 @@ const BlogCards = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {edges.map(({ node }) => (
               <BlogCard
+                key={node.title}
                 title={node.title}
                 image={node.headingImage.file.url}
                 date={node.date}

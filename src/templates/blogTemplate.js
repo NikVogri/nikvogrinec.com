@@ -19,7 +19,10 @@ const blogTemplate = ({ data }) => {
         <h3 className="heading3">{children}</h3>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
-        <img src={`https:${node.data.target.fields.file["en-US"].url}`} />
+        <img
+          src={`https:${node.data.target.fields.file["en-US"].url}`}
+          alt={blog.title}
+        />
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
         <p className="copy">{children}</p>

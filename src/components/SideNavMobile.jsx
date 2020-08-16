@@ -4,14 +4,15 @@ import { Link } from "gatsby"
 const MobileNav = ({ links, isOpen, close }) => {
   return (
     <>
-      <div
-        className={`mobile-nav-background block sm:hidden ${
+      <button
+        className={`mobile-nav-background block sm:hidden bg-transparent border-none ${
           isOpen ? "open" : ""
         }`}
         onClick={close}
         onKeyDown={close}
-        role="window"
-      ></div>
+        tabIndex="0"
+        aria-label="Close mobile navigation menu"
+      ></button>
       <div className={`mobile-nav block sm:hidden p-8 ${isOpen ? "open" : ""}`}>
         {links.map(link => (
           <Link key={link.name} to={link.to} onClick={close}>

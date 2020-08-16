@@ -2,9 +2,6 @@ import React from "react"
 import ProjectCard from "./ProjectCard"
 import Title from "./Title"
 
-import Dodecahedron from "../images/shapes/dodecahedron.svg"
-import Cube from "../images/shapes/cube.svg"
-
 import "../styles/sass/projects.scss"
 
 const Projects = () => {
