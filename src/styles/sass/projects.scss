@@ -1,24 +1,63 @@
 .projects {
+  .particles {
+    z-index: -1;
+  }
+  &-bg-2 {
+    position: absolute;
+    left: 75%;
+    animation: breathing 10s infinite;
+  }
 
-  padding: 7.5rem 0;
+  &-bg-1 {
+    position: absolute;
+    top: 50%;
+    right: 80%;
+    animation: breathing 10s infinite;
+  }
+
+  @keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+
+    50% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+
+    100% {
+      -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+  }
+
+  padding: 5.5rem 0;
 
   @media only screen and (max-width: 768px) {
     padding: 3.5rem 0;
   }
 
   &-card {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
+
+    &-icon {
+      width: auto;
+      height: 2.5rem;
+    }
 
     &:nth-of-type(1) {
       padding-top: 0;
     }
 
-    border-bottom: solid 1px var(--horizontal-ruling);
-
     .project-title {
       font-size: 2.2rem;
       font-weight: 400;
       color: var(--text-color);
+      opacity: 1;
     }
 
     .project-links {
@@ -27,38 +66,16 @@
     }
 
     p {
+      line-height: 2.45rem;
       color: var(--text-color);
       font-size: 1.4rem;
       font-weight: 300;
-      opacity: 0.80;
+      opacity: 0.95;
     }
   }
 
   .project-link {
     position: relative;
     padding: 0.25rem;
-
-    &::before {
-      content: "";
-      width: 0;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background-color: rgba(47, 128, 237, 0.45);
-      position: absolute;
-      transition: width .2s ease-in;
-    }
-
-    &:hover::before {
-      transition: width .2s ease-out;
-      width: 120%;
-    }
-
-    &:hover {
-      transition: color .2s ease-out;
-      padding: 0.25rem;
-      color: #fff !important;
-    }
   }
 }

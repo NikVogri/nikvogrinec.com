@@ -21,7 +21,9 @@ const IndexPage = () => {
       />
       <Hero />
       <Projects />
+      <hr />
       <About />
+      <hr />
       <BlogCards />
     </Layout>
   )

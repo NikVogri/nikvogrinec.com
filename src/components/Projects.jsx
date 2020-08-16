@@ -2,6 +2,9 @@ import React from "react"
 import ProjectCard from "./ProjectCard"
 import Title from "./Title"
 
+import Dodecahedron from "../images/shapes/dodecahedron.svg"
+import Cube from "../images/shapes/cube.svg"
+
 import "../styles/sass/projects.scss"
 
 const Projects = () => {
@@ -89,6 +92,8 @@ const Projects = () => {
 
   return (
     <section className="projects  py-16 md:py-0" id="projects">
+      {/* <img src={Cube} alt="background" className="projects-bg-1" />
+      <img src={Dodecahedron} alt="background" className="projects-bg-2" /> */}
       <Title title="Some Projects I’ve Worked On" />
       {projects.map(project => (
         <ProjectCard

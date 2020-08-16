@@ -1,6 +1,6 @@
 .about {
 
-  padding: 7.5rem 0;
+  padding: 5.5rem 0;
 
   @media only screen and (max-width: 768px) {
     padding: 3.5rem 0;
@@ -9,7 +9,7 @@
   &-long {
     font-weight: 400;
     line-height: 45px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-color);
 
     @media only screen and(max-width: 768px) {
@@ -37,7 +37,7 @@
 
       p {
         margin-left: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 400;
         color: var(--text-color);
       }

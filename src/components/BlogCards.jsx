@@ -34,7 +34,7 @@ const BlogCards = () => {
         }
       `}
       render={({ allContentfulBlog: { edges } }) => (
-        <section className="blog-cards py-16" id="blog-cards">
+        <section className="blog-cards" id="blog-cards">
           <Title title="Check out my blog" />
           <div className="grid md:grid-cols-3 gap-12">
             {edges.map(({ node }) => (
