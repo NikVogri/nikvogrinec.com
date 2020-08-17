@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from "prop-types"
+
 import { Link } from "gatsby"
 
 const MobileNav = ({ links, isOpen, close }) => {
@@ -22,6 +24,12 @@ const MobileNav = ({ links, isOpen, close }) => {
       </div>
     </>
   )
+}
+
+MobileNav.propTypes = {
+  links: PropTypes.array.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
 }
 
 export default MobileNav

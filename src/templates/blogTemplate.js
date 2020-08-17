@@ -49,7 +49,7 @@ const blogTemplate = ({ data }) => {
             <div>
               <p>written by {blog.writter}</p>
               <p>
-                on {blog.date} · {blog.timeToRead} minute/s read
+                {blog.date} · {blog.timeToRead} minute read
               </p>
             </div>
           </div>
@@ -83,7 +83,9 @@ const blogTemplate = ({ data }) => {
           blog.childContentfulBlogBodyRichTextNode.json,
           options
         )}
-        <Link to="/blog">&lt; Go back</Link>
+        <Link to="/blog" className="blog-goback">
+          &lt; Go back
+        </Link>
       </article>
     </Layout>
   )

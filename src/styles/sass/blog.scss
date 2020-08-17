@@ -45,6 +45,14 @@
   .blog-single {
     max-width: 72.4rem;
     color: var(--text-color);
+    padding-bottom: 3rem;
+
+    .blog-goback {
+      font-size: 1.6rem;
+      color: var(--primary-color);
+
+    }
+
 
     img {
       width: 100%;
@@ -68,6 +76,10 @@
       font-weight: 400;
       margin-bottom: 3rem;
       line-height: 3rem;
+
+      @media only screen and (max-width: 640px) {
+        font-size: 1.4rem;
+      }
     }
 
     h3 {
@@ -103,4 +115,17 @@
         fill: var(--text-color);
       }
     }
+  }
+
+
+  .blog-header-bg {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: auto;
+    opacity: 0.35;
+    height: 70%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
   }

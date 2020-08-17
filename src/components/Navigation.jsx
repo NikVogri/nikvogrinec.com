@@ -1,6 +1,8 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import SideNavMobile from "./SideNavMobile"
+
+import { myContext } from "../Context/ThemeContext"
 
 import ToggleDarkSvg from "../images/toggle-dark.svg"
 import ToggleLightSvg from "../images/toggle-light.svg"
@@ -9,7 +11,8 @@ import "../styles/sass/navigation.scss"
 
 const Navigation = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false)
-  const [darkMode, setDarkMode] = useState(false)
+
+  const theme = useContext(myContext)
 
   const mobileNavToggle = () => {
     !openMobileNav
@@ -20,26 +23,18 @@ const Navigation = () => {
   }
 
   useEffect(() => {
-    const darkModeEnabled = localStorage.getItem("dark-mode")
-    if (darkModeEnabled) {
-      setDarkMode(true)
-      document.body.classList.add("dark-mode")
-      document.body.classList.remove("light-mode")
-    } else {
-      document.body.classList.add("light-mode")
-    }
     // Remove scroll lock when another page gets loaded
     document.body.style = "overflow-x: hidden;"
-  }, [darkMode])
+  }, [])
 
   const toggleDarkMode = () => {
-    if (!darkMode) {
+    if (!theme.isDark) {
       localStorage.setItem("dark-mode", true)
     } else {
       localStorage.removeItem("dark-mode")
     }
 
-    setDarkMode(!darkMode)
+    theme.setDarkMode()
     document.body.classList.toggle("dark-mode")
     document.body.classList.toggle("light-mode")
   }
@@ -84,11 +79,11 @@ const Navigation = () => {
               className={`ml-6 sm:ml-8 outline-none bg-transparent border-none inline-block p-0`}
             >
               <img
-                src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
+                src={!theme.isDark ? ToggleDarkSvg : ToggleLightSvg}
                 alt="toggles dark mode"
-                title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+                title={theme.isDark ? "Toggle Light Mode" : "Toggle Dark Mode"}
                 className={` cursor-pointer toggler ${
-                  darkMode ? "dark-toggled" : "light-toggled"
+                  theme.isDark ? "dark-toggled" : "light-toggled"
                 }`}
               />
             </button>
@@ -101,11 +96,11 @@ const Navigation = () => {
               className={`ml-6 sm:ml-8 outline-none bg-transparent border-none inline-block p-0`}
             >
               <img
-                src={!darkMode ? ToggleDarkSvg : ToggleLightSvg}
+                src={!theme.isDark ? ToggleDarkSvg : ToggleLightSvg}
                 alt="toggles dark mode"
-                title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+                title={theme.isDark ? "Toggle Light Mode" : "Toggle Dark Mode"}
                 className={`cursor-pointer mr-10 toggler outline-none  ${
-                  darkMode ? "dark-toggled" : "light-toggled"
+                  theme.isDark ? "dark-toggled" : "light-toggled"
                 }`}
               />
             </button>

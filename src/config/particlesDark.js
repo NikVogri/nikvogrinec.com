@@ -4,25 +4,20 @@ export default {
       value: 10,
       density: {
         enable: true,
-        value_area: 800,
+        value_area: 1000,
       },
     },
     color: {
-      value: "#333",
+      value: "#fff",
     },
     shape: {
       type: "circle",
       stroke: {
         width: 0,
-        color: "#333",
+        color: "#fff",
       },
       polygon: {
         nb_sides: 5,
-      },
-      image: {
-        src: "img/github.svg",
-        width: 100,
-        height: 100,
       },
     },
     opacity: {
@@ -48,7 +43,7 @@ export default {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#333",
+      color: "#fff",
       opacity: 0.4,
       width: 1,
     },

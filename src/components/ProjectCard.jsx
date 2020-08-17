@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from "prop-types"
+
 import ListSvg from "../images/icons/list.svg"
 
 const ProjectCard = ({ icon, name, description, urls }) => {
@@ -28,6 +30,12 @@ const ProjectCard = ({ icon, name, description, urls }) => {
       </div>
     </div>
   )
+}
+
+ProjectCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  urls: PropTypes.array.isRequired,
 }
 
 export default ProjectCard

@@ -7,7 +7,14 @@
   top: 0;
   left: 0;
 
+  @media only screen and (max-width: 1278px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+
   @media only screen and (max-width: 640px) {
+    width: 100%;
     border-bottom: solid 1px var(--horizontal-ruling);
     background-color: var(--background-color);
   }

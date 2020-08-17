@@ -1,41 +1,50 @@
 import PropTypes from "prop-types"
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import "../styles/style.css"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
 import Particles from "react-particles-js"
 
-import useLocalStorage from "../hooks/useLocalStorage"
-import particleConfig from "../config/particles"
+import { myContext } from "../Context/ThemeContext"
+
+import particleConfigLight from "../config/particlesLight"
+import particleConfigDark from "../config/particlesDark"
 
 const Layout = ({ children }) => {
-  const { getFromlocalStorage, data: darkMode } = useLocalStorage()
-
+  const theme = useContext(myContext)
   useEffect(() => {
-    getFromlocalStorage("dark-mode")
-
-    if (darkMode) {
-      particleConfig.particles.color = "#fff"
-      particleConfig.particles.line_linked.color = "#fff"
+    const darkModeEnabled = localStorage.getItem("dark-mode")
+    if (darkModeEnabled) {
+      theme.setDarkMode(true)
+      document.body.classList.add("dark-mode")
+      document.body.classList.remove("light-mode")
+    } else {
+      document.body.classList.add("light-mode")
     }
-  }, [])
+  }, [theme])
 
   return (
-    <>
-      <Particles
-        className="particles hidden md:block"
-        params={particleConfig}
-      />
-      <Navigation />
-      <main className="container">{children}</main>
-      <Footer />
-    </>
+    <myContext.Consumer>
+      {context => (
+        <>
+          <Particles
+            className="particles hidden md:block"
+            params={context.isDark ? particleConfigDark : particleConfigLight}
+          />
+          <Navigation />
+          <main className="container">{children}</main>
+          <Footer />
+        </>
+      )}
+    </myContext.Consumer>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  isHome: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 }
 
 export default Layout

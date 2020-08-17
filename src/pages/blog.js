@@ -1,17 +1,21 @@
 import { graphql } from "gatsby"
-import React from "react"
+import React, { useContext } from "react"
 
 import SiteMetadata from "../components/SiteMetadata.jsx"
 import BlogCard from "../components/BlogCard"
 import BlogsAside from "../components/BlogsAside"
 
+import { myContext } from "../Context/ThemeContext"
+
 import Layout from "../layouts/Layout"
 
-import bgFade from "../images/shapes/bg-fade.svg"
+import bgFadeLight from "../images/shapes/bg-fade-light.svg"
+import bgFadeDark from "../images/shapes/bg-fade-dark.svg"
 
 import "../styles/sass/blog.scss"
 
 const BlogPage = ({ data }) => {
+  const theme = useContext(myContext)
   const {
     allContentfulBlog: { edges },
   } = data
@@ -23,7 +27,11 @@ const BlogPage = ({ data }) => {
         description="Check out my blogs on web development. I make a blog whenever I feel like it!"
       />
       <header className="blogs-header relative md:pt-20">
-        <img src={bgFade} alt="test" className="test" />
+        <img
+          src={theme.isDark ? bgFadeDark : bgFadeLight}
+          alt="test"
+          className="blog-header-bg"
+        />
         <h1>My Blog</h1>
         <p>
           Mostly whatever is on my mind mixed with web development tips and
@@ -31,7 +39,7 @@ const BlogPage = ({ data }) => {
         </p>
       </header>
       <hr />
-      <section className="md:grid grid-cols-3 gap-20 mt-8">
+      <section className="md:grid grid-cols-3 gap-20 mt-8 py-5">
         <div className="col-span-2 w-full ">
           {edges.map(({ node }) => (
             <BlogCard
@@ -41,6 +49,7 @@ const BlogPage = ({ data }) => {
               date={node.date}
               description={node.excerpt.excerpt}
               link={`/blog/${node.slug}`}
+              className="mb-10"
             />
           ))}
         </div>

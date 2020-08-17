@@ -67,23 +67,20 @@ a {
 
 }
 
+@media only screen and (max-width: 1124px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+
 @media only screen and (max-width: 960px) {
   .container {
+    padding: 0;
     width: 92vw;
   }
 }
 
-.test {
-  position: absolute;
-  z-index: -1;
-  object-fit: cover;
-  width: auto;
-  height: 100%;
-  opacity: 0.15;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-}
 
 @media only screen and (max-width: 640px) {
 

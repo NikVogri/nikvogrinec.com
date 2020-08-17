@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from "prop-types"
+
 import { Link } from "gatsby"
 
 const BlogCard = ({ title, image, date, description, link, className }) => {
@@ -21,6 +23,13 @@ const BlogCard = ({ title, image, date, description, link, className }) => {
       </div>
     </div>
   )
+}
+BlogCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  className: PropTypes.string,
 }
 
 export default BlogCard
