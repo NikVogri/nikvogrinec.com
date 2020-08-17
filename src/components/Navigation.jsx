@@ -1,9 +1,8 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useState, useEffect, useContext } from "react"
-import SideNavMobile from "./SideNavMobile"
-
 import { myContext } from "../Context/ThemeContext"
 
+import SideNavMobile from "./SideNavMobile"
 import ToggleDarkSvg from "../images/toggle-dark.svg"
 import ToggleLightSvg from "../images/toggle-light.svg"
 

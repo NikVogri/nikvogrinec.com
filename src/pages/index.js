@@ -13,6 +13,12 @@ import SiteMetadata from "../components/SiteMetadata.jsx"
 // import Dodecahedron from "../../public/images/shapes/dodecahedron.svg"
 
 const IndexPage = () => {
+  if (typeof window !== "undefined") {
+    // Make scroll behavior of internal links smooth
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   return (
     <Layout>
       <SiteMetadata

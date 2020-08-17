@@ -91,7 +91,7 @@ const Projects = () => {
     <section className="projects  py-16 md:py-0" id="projects">
       {/* <img src={Cube} alt="background" className="projects-bg-1" />
       <img src={Dodecahedron} alt="background" className="projects-bg-2" /> */}
-      <Title title="Some Projects I’ve Worked On" />
+      <Title title="Projects I’ve Worked On" />
       {projects.map(project => (
         <ProjectCard
           key={project.title}
