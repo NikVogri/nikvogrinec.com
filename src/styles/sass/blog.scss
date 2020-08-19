@@ -42,6 +42,13 @@
     }
   }
 
+  .no-found {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    opacity: 0.75;
+    text-decoration: underline;
+  }
+
   .blog-single {
     max-width: 72.4rem;
     color: var(--text-color);

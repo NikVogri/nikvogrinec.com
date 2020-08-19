@@ -21,17 +21,17 @@ module.exports = {
     links: [
       {
         name: "LinkedIn",
-        url: "https://www.facebook.com/",
+        url: "https://www.linkedin.com/in/nik-vogrinec/",
         img: "FaLinkedin",
       },
       {
         name: "Github",
-        url: "https://www.github.com/",
+        url: "https://github.com/NikVogri",
         img: "FaGithub",
       },
       {
         name: "CodePen",
-        url: "https://www.codepen.com/",
+        url: "https://codepen.io/nickvogri",
         img: "FaCodepen",
       },
     ],
@@ -39,6 +39,9 @@ module.exports = {
     title: `Nik Vogrinec Portfolio`,
     description: `Portfolio for full stack web developer Nik Vogrinec located in Slovenia.`,
     author: `@nikvogrinec`,
+    categories: {
+      items: ["PROGRAMMING", "DESIGN", "LIFE"],
+    },
   },
   plugins: [
     `gatsby-plugin-postcss`,

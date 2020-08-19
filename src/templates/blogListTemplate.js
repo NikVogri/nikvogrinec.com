@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
 import React, { useContext } from "react"
-import withLocation from "../hoc/withLocation"
 
 import SiteMetadata from "../components/SiteMetadata.jsx"
 import BlogCard from "../components/BlogCard"
@@ -15,13 +14,13 @@ import bgFadeDark from "../images/shapes/bg-fade-dark.svg"
 
 import "../styles/sass/blog.scss"
 
-const BlogPage = ({ data, search }) => {
+const BlogPage = ({
+  data: {
+    allContentfulBlog: { nodes },
+  },
+}) => {
   const theme = useContext(myContext)
-  const {
-    allContentfulBlog: { edges },
-  } = data
 
-  console.log(search.name)
   return (
     <Layout>
       <SiteMetadata
@@ -43,7 +42,10 @@ const BlogPage = ({ data, search }) => {
       <hr />
       <section className="md:grid grid-cols-3 gap-20 mt-8 py-5">
         <div className="col-span-2 w-full ">
-          {edges.map(({ node }) => (
+          {nodes.length < 1 && (
+            <p className="no-found">No blogs found for this category...</p>
+          )}
+          {nodes.map(node => (
             <BlogCard
               key={node.slug}
               title={node.title}
@@ -62,20 +64,18 @@ const BlogPage = ({ data, search }) => {
 }
 
 export const query = graphql`
-  query AllBlogs {
-    allContentfulBlog {
-      edges {
-        node {
-          slug
-          title
-          excerpt {
-            excerpt
-          }
-          date(formatString: "DD.MM.YYYY")
-          headingImage {
-            file {
-              url
-            }
+  query BlogsByCategory($category: String!) {
+    allContentfulBlog(filter: { tags: { eq: $category } }) {
+      nodes {
+        slug
+        title
+        excerpt {
+          excerpt
+        }
+        date(formatString: "DD.MM.YYYY")
+        headingImage {
+          file {
+            url
           }
         }
       }
@@ -83,4 +83,4 @@ export const query = graphql`
   }
 `
 
-export default withLocation(BlogPage)
+export default BlogPage
