@@ -3,11 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 import "../styles/sass/footer.scss"
 
-// svgs
-import FaGithub from "../images/icons/FaGithub.svg"
-import LinkedIn from "../images/icons/FaLinkedin.svg"
-import CodepenLink from "../images/icons/FaCodepen.svg"
-
 const Footer = () => {
   return (
     <footer className="footer py-8 md:py-12">
@@ -38,8 +33,8 @@ const Footer = () => {
 const renderContent = data => (
   <div className="flex items-center justify-center">
     {data.siteMetadata.links.map(link => (
-      <a href={link.url}>
-        <img src={`./icons/${link.img}.svg`} alt={link.name} />
+      <a href={link.url} key={link.name}>
+        <img src={`icons/${link.img}.svg`} alt={link.name} />
       </a>
     ))}
   </div>

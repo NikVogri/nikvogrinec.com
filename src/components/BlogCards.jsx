@@ -21,7 +21,7 @@ const BlogCards = () => {
                 excerpt {
                   excerpt
                 }
-                date(formatString: "DD.MM.YYYY")
+                date(formatString: "DD  MMMM, YYYY")
                 headingImage {
                   file {
                     url

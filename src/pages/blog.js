@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
 import React, { useContext } from "react"
-import withLocation from "../hoc/withLocation"
 
 import SiteMetadata from "../components/SiteMetadata.jsx"
 import BlogCard from "../components/BlogCard"
@@ -15,13 +14,12 @@ import bgFadeDark from "../images/shapes/bg-fade-dark.svg"
 
 import "../styles/sass/blog.scss"
 
-const BlogPage = ({ data, search }) => {
+const BlogPage = ({ data }) => {
   const theme = useContext(myContext)
   const {
     allContentfulBlog: { edges },
   } = data
 
-  console.log(search.name)
   return (
     <Layout>
       <SiteMetadata
@@ -83,4 +81,4 @@ export const query = graphql`
   }
 `
 
-export default withLocation(BlogPage)
+export default BlogPage

@@ -30,14 +30,12 @@ const Hero = () => {
       </div>
       <div className="hero-long mt-8  md:mt-16 relative">
         <p>
-          Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
-          Phasellus non metus eleifend, vehicula magna nec, malesuada mauris.
-          Nunc quam turpis, suscipit quis eros at, egestas aliquet nisi. Duis
-          scelerisque purus malesuada ante posuere, vel finibus massa
-          vestibulum. Vivamus luctus felis eros, eu pellentesque risus commodo
-          quis. Duis feugiat <span>eros diam</span>, mollis semper nunc
-          malesuada quis. Donec quis feugiat urna. Donec blandit gravida libero
-          a bibendum. Integer dui dolor, semper <span>acvestibulum</span>.
+          Hello, and welcome to my website. I spend my time designing and
+          developing <span>real-world web applications</span> that make people's
+          lives easier in any way I can. I started this journey a couple of
+          years ago but got fully invested into it more{" "}
+          <span>than a year ago</span>. I work with with many technologies both
+          in <span>front-end</span> and <span>back-end</span>.
         </p>
       </div>
     </section>
