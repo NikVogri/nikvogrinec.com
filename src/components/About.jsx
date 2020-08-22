@@ -40,7 +40,7 @@ const About = () => {
           </a>
         </li>
         <li>
-          <a>
+          <a href="#">
             <img src={ResumeBlue} alt="resume" />{" "}
             <p>Resume(PDF) &lt;- Coming soon</p>
           </a>
