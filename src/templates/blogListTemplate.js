@@ -30,7 +30,7 @@ const BlogPage = ({
       <header className="blogs-header relative md:pt-20">
         <img
           src={theme.isDark ? bgFadeDark : bgFadeLight}
-          alt="test"
+          alt="title background"
           className="blog-header-bg"
         />
         <h1>My Blog</h1>

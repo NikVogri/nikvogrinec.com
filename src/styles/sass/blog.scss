@@ -1,5 +1,6 @@
   .blogs-header {
     text-align: center;
+    overflow-x: hidden;
 
     padding-bottom: 5rem;
 
@@ -54,6 +55,7 @@
     color: var(--text-color);
     padding-bottom: 3rem;
     background-color: var(--background-color);
+    transition: background .5s ease-in-out;
 
     .blog-goback {
       font-size: 1.6rem;
