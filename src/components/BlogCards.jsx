@@ -13,7 +13,7 @@ const BlogCards = () => {
     <StaticQuery
       query={graphql`
         query MyQuery {
-          allContentfulBlog(limit: 3) {
+          allContentfulBlog(limit: 3, sort: { fields: date, order: DESC }) {
             edges {
               node {
                 slug
