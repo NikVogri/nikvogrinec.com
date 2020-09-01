@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SiteMetadata
-        title="Blogs | Nik Vogrinec"
+        title="Blog | Nik Vogrinec"
         description="Check out my blogs on web development. I make a blog whenever I feel like it!"
       />
       <header className="blogs-header relative md:pt-20">
@@ -49,7 +49,7 @@ const BlogPage = ({ data }) => {
               date={node.date}
               description={node.excerpt.excerpt}
               link={`/blog/${node.slug}`}
-              className="mb-10"
+              className="mb-10 card-big"
             />
           ))}
         </div>

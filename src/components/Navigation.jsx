@@ -124,7 +124,6 @@ const Navigation = () => {
           close={() => mobileNavToggle()}
         />
       </nav>
-      <hr />
     </>
   )
 }

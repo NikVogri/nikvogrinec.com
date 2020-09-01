@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import SiteMetadata from "../components/SiteMetadata"
@@ -15,31 +15,33 @@ const blogTemplate = ({ data }) => {
 
   const options = {
     renderNode: {
-      [BLOCKS.HEADING_3]: (node, children) => (
-        <h3 className="heading3">{children}</h3>
-      ),
+      [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
         <img
           src={`https:${node.data.target.fields.file["en-US"].url}`}
           alt={blog.title}
         />
       ),
-      [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className="copy">{children}</p>
+      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+    },
+    renderMark: {
+      [MARKS.CODE]: text => (
+        <pre>
+          <code>{text}</code>
+        </pre>
       ),
     },
-    renderMark: {},
   }
 
   return (
     <Layout>
       <SiteMetadata
-        title={`Nik Vogrinec | ${blog.title}`}
-        description={blog.excerpt}
+        title={`${blog.title} | Nik Vogrinec`}
+        description={blog.excerpt.excerpt}
       />
       <article className="container blog-single">
         <h1>{blog.title}</h1>
-        <div class="blog-single-about md:flex justify-between align-baseline py-12">
+        <div className="blog-single-about md:flex justify-between align-baseline py-12">
           <div className="flex items-center">
             <img
               src={placeholderImage}
@@ -78,11 +80,13 @@ const blogTemplate = ({ data }) => {
             </a>
           </div>
         </div>
-        <img src={blog.headingImage.file.url} alt={blog.title} />
-        {documentToReactComponents(
-          blog.childContentfulBlogBodyRichTextNode.json,
-          options
-        )}
+        <div className="blog-body">
+          <img src={blog.headingImage.file.url} alt={blog.title} />
+          {documentToReactComponents(
+            blog.childContentfulBlogBodyRichTextNode.json,
+            options
+          )}
+        </div>
         <Link to="/blog" className="blog-goback">
           &lt; Go back
         </Link>

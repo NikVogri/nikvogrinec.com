@@ -24,7 +24,7 @@ const BlogPage = ({
   return (
     <Layout>
       <SiteMetadata
-        title="Blogs | Nik Vogrinec"
+        title="Blog | Nik Vogrinec"
         description="Check out my blogs on web development. I make a blog whenever I feel like it!"
       />
       <header className="blogs-header relative md:pt-20">
