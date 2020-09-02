@@ -53,7 +53,7 @@ const BlogPage = ({
               date={node.date}
               description={node.excerpt.excerpt}
               link={`/blog/${node.slug}`}
-              className="mb-10"
+              className="mb-10 card-big"
             />
           ))}
         </div>
@@ -72,7 +72,7 @@ export const query = graphql`
         excerpt {
           excerpt
         }
-        date(formatString: "DD.MM.YYYY")
+        date(formatString: "DD  MMMM, YYYY")
         headingImage {
           file {
             url

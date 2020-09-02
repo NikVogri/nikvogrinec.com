@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const BlogCard = ({ title, image, date, description, link, className }) => {
-  console.log(className)
   return (
     <div
       className={`shadow-md rounded-lg overflow-hidden card hover:shadow-lg transition-all duration-500 ${

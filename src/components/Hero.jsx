@@ -15,7 +15,7 @@ const Hero = () => {
   `)
 
   return (
-    <section className="hero py-16 md:py-0 relative" id="hero">
+    <section className="hero relative" id="hero">
       <div className="md:flex items-center mt-8 lg:mt-0">
         <div className="md:w-1/2 w-full relative">
           <h1>
