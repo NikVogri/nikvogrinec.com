@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SiteMetadata from "../components/SiteMetadata"
 import Layout from "../layouts/Layout"
 
-import placeholderImage from "../images/author.jpg"
+import BlogAuthor from "../images/author.png"
 
 import "../styles/sass/blog.scss"
 
@@ -43,11 +43,7 @@ const blogTemplate = ({ data }) => {
         <h1>{blog.title}</h1>
         <div className="blog-single-about md:flex justify-between align-baseline py-12">
           <div className="flex items-center">
-            <img
-              src={placeholderImage}
-              alt={blog.writter}
-              className="mr-3 w-full"
-            />
+            <img src={BlogAuthor} alt={blog.writter} className="mr-3 w-full" />
             <div>
               <p>written by {blog.writter}</p>
               <p>

@@ -63,6 +63,11 @@
     }
 
     .project-links {
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
       font-size: 1.4rem;
       color: var(--primary-color);
     }

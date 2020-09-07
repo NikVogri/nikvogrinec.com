@@ -37,7 +37,8 @@ module.exports = {
     ],
     locale: "en",
     title: `Nik Vogrinec Portfolio`,
-    description: `Portfolio for full stack web developer Nik Vogrinec located in Slovenia.`,
+    description: `My name is Nik Vogrinec and I am full-stack web developer located in Slovenia. 
+    I work with Laravel, PHP, Node, Express, React, Gatsby, CSS, JS, HTML5, MySQL, Bootstrap, and various others.`,
     author: `@nikvogrinec`,
     categories: {
       items: ["PROGRAMMING", "DESIGN", "LIFE"],
