@@ -6,6 +6,10 @@
     padding: 3.5rem 0;
   }
 
+  .socials svg {
+    fill: var(--text-color) !important;
+  }
+
   &-long {
     font-weight: 400;
     line-height: 45px;
