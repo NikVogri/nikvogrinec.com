@@ -1,6 +1,4 @@
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-
 
 html {
   font-size: 62.5%;
@@ -24,21 +22,21 @@ body {
 }
 
 body.dark-mode {
-  transition: all .5s ease-in-out;
-  --primary-color: #2F80ED;
+  transition: all 0.5s ease-in-out;
+  --primary-color: #2f80ed;
   --text-color: #fff;
   --bg-shape: rgba(255, 255, 255, 0.2);
   --horizontal-ruling: rgba(255, 255, 255, 0.1);
   --primary-button: rgba(47, 128, 237, 1);
-  --background-color: #1B1B2F;
+  --background-color: #1b1b2f;
   --secondary-color: #fff;
   --secondary-background: #002658;
   --shape-opacity: 0.05;
 }
 
 body.light-mode {
-  transition: all .5s ease-in-out;
-  --primary-color: #2F80ED;
+  transition: all 0.5s ease-in-out;
+  --primary-color: #2f80ed;
   --secondary-color: #fff;
   --text-color: #333333;
   --bg-shape: #0000000d;
@@ -46,16 +44,13 @@ body.light-mode {
   --horizontal-ruling: rgba(87, 88, 90, 0.1);
   --primary-button: rgba(47, 128, 237, 0.5);
   --background-color: #fff;
-  --secondary-background: #2F80ED;
+  --secondary-background: #2f80ed;
 }
 
 hr {
   border: solid 1px var(--horizontal-ruling);
   margin: 0;
 }
-
-
-
 
 a {
   text-decoration: none;
@@ -64,7 +59,6 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1124px;
-
 }
 
 @media only screen and (max-width: 1124px) {
@@ -73,7 +67,6 @@ a {
   }
 }
 
-
 @media only screen and (max-width: 960px) {
   .container {
     padding: 0;
@@ -81,9 +74,7 @@ a {
   }
 }
 
-
 @media only screen and (max-width: 640px) {
-
   #about,
   #projects,
   #blog {
