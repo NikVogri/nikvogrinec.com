@@ -6,9 +6,25 @@
     padding: 3.5rem 0;
   }
 
-  .socials svg {
-    fill: var(--text-color) !important;
+
+  .socials {
+    & svg {
+      fill: var(--text-color) !important;
+    }
+
+    & li:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+
+    & p {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0.5rem;
+    }
   }
+
+
+
 
   &-long {
     font-weight: 400;

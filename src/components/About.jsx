@@ -16,20 +16,18 @@ const About = () => {
       <Title title="Get to know me" />
       <div className="about-long mb-5">
         <p className="mt-0">
-          My name is <span>Nik Vogrinec</span>, and I come from a small country
-          in the center of Europe called <span>Slovenia</span>. I found my
-          passion for programming while browsing the web and wondering how
-          websites are built. I have a bunch of <span>technologies</span> in my
-          tool belt, many of which I use daily. I specialize in{" "}
-          <span>web development</span>. Most of my days are spent with{" "}
-          <span>PHP or Node</span> on the back-end and <span>React</span> on the
-          front-end with <span>Tailwind</span> and
-          <span> Bootstrap</span> for styling. <span>I love learning</span> new
-          technologies and implementing them in my various projects. Let's have
-          a chat?
+          My name is Nik Vogrinec, and I come from a small country in the center
+          of Europe called Slovenia. I found my passion for programming while
+          browsing the web and wondering how websites work. I specialize in
+          full-stack web development, so I spend most of my days designing and
+          coding applications in Laravel and NodeJS on the backend and React and
+          Vue on the front end. I style my applications with custom CSS,
+          Bootstrap, or Tailwind. My favourite programming languages are PHP and
+          Javascript. I put a lot of time and energy in learning as much as I
+          can every single day. So, what do you think? Let's have a chat?
         </p>
       </div>
-      <ul className="list-none socials m-0 p-0">
+      <ul className="list-none flex align-center socials m-0 p-0">
         <li>
           <a href="http://www.github.com/nikvogri">
             <svg
@@ -59,7 +57,7 @@ const About = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -78,7 +76,7 @@ const About = () => {
                 </svg>
               </g>
             </svg>
-            <p>Resume(PDF) &lt;- Coming soon</p>
+            <p>Resume (Coming soon)</p>
           </a>
         </li>
       </ul>

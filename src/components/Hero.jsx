@@ -30,12 +30,18 @@ const Hero = () => {
       </div>
       <div className="hero-long mt-8  md:mt-16 relative">
         <p>
-          Hello, and welcome to my website. I spend my time designing and
-          developing <span>real-world web applications</span> that make people's
-          lives easier in any way I can. I started this journey a couple of
-          years ago but got fully invested into it more{" "}
-          <span>than a year ago</span>. I work with with many technologies both
-          in <span>front-end</span> and <span>back-end</span>.
+          Hi, and welcome to my portfolio website. I spend my time designing and
+          developing real-world web applications that make people's lives just a
+          bit easier in any way I can. I started this journey a couple of years
+          ago but got fully invested into it more than a year ago. I work with
+          various technologies both in front-end and back-end.
+          {/* Hello, and
+          welcome to my website. I spend my time designing and developing{" "}
+          <span>real-world web applications</span> that make people's lives
+          easier in any way I can. I started this journey a couple of years ago
+          but got fully invested into it more <span>than a year ago</span>. I
+          work with with many technologies both in <span>front-end</span> and{" "}
+          <span>back-end</span>. */}
         </p>
       </div>
     </section>

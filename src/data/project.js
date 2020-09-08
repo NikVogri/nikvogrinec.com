@@ -1,9 +1,34 @@
 export default [
   {
+    title: "Open Source Restaurant Managing System",
+    description: `Open Source project created to simplify restaurant order and inventory management.
+     Manage items, categories, orders, coupons, view detailed sale reports, send messages to your staff, and much more all from the CMS.
+      `,
+    urls: [
+      {
+        name: "Github",
+        url: "https://github.com/NikVogri/restaurant-cms-laravel",
+      },
+    ],
+  },
+  {
+    title: "Filmetor",
+    description: `A social network focused on movies & tv shows with a fully integrated live chat system and detailed content description. `,
+    urls: [
+      {
+        name: "Github",
+        url: "https://github.com/NikVogri/movie-searcher-react",
+      },
+      {
+        name: "Live Site",
+        url: "https://filmetor.netlify.app/",
+      },
+    ],
+  },
+  {
     title: "Freecourso",
-    description: `Freecourso is a free course site built with GatsbyJS in the front-end and Firebase back-end.Freecourso's goal is to provide educational tools - for free - 
-        to anyone interested in learning and advancing themselves in the art of programming. As the project grows we often add additional 
-        video material and small quizzes to test your knowledge.`,
+    description: `
+    Our goal was to provide free educational content to anyone interested in learning programming. As the project grows we often add additional video material that focuses on the future.`,
     urls: [
       {
         name: "Github",
@@ -16,53 +41,8 @@ export default [
     ],
   },
   {
-    title: "Filmetor",
-    description: `Filmetor is a social-network platform for finding movies & tv shows and rating them based on your
-       viewing experience with the content. It is built with the very popular ReactJS and Redux to help with the complexity. The project also required a back-end 
-       so I went with NodeJS's express framework & SocketIO for realtime communication between users. 
-       `,
-    urls: [
-      {
-        name: "Github",
-        url: "https://github.com/NikVogri/movie-searcher-react",
-      },
-      {
-        name: "Live Site",
-        url: "https://filmetor.netlify.app/",
-      },
-    ],
-  },
-
-  {
-    title: "Manineta ecommerce website",
-    description: `Manineta Graviranje is an e-commerce web store for a small company. 
-      The project is built in GatsbyJS an amazing framework built on React, and Contentful content management
-       system for managing content displayed on the website.`,
-    urls: [
-      {
-        name: "Github",
-        url: "https://github.com/NikVogri/manineta-site",
-      },
-    ],
-  },
-  {
-    title: "Restaurant CMS & Front",
-    description: `
-      A fully functional restaurant website built in PHP and Laravel. It is a complete CMS which allows admins and staff to edit items, 
-      create payment options, manage menus, etc... And it allows visitors to order their favourite food in a matter of seconds!
-      `,
-    urls: [
-      {
-        name: "Github",
-        url: "https://github.com/NikVogri/restaurant-cms-laravel",
-      },
-    ],
-  },
-  {
     title: "Complex Data Tracker",
-    description: `A complex data tracker which get's the data by scraping the internet, and displays the data with a custom built API in NodeJS and express.
-      Data is collected in increments of 2 hours by the scraper and gets stored to a MySQL database for 31 days.
-      `,
+    description: `A complex data tracker consists of an API, scraper, and a webpage built to update every few hours with new daily data.`,
     urls: [
       {
         name: "Scraper",
@@ -75,6 +55,16 @@ export default [
       {
         name: "Live Site",
         url: "https://virus-corona-tracker.netlify.app/",
+      },
+    ],
+  },
+  {
+    title: "And a ton of smaller projects...",
+    description: `Most of my projects big and small are listed on my github account, take a look :)`,
+    urls: [
+      {
+        name: "Github",
+        url: "https://github.com/NikVogri",
       },
     ],
   },
