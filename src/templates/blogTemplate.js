@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { DiscussionEmbed } from "disqus-react"
 
 import SiteMetadata from "../components/SiteMetadata"
 import Layout from "../layouts/Layout"
@@ -12,7 +13,6 @@ import "../styles/sass/blog.scss"
 
 const blogTemplate = ({ data }) => {
   const blog = data.contentfulBlog
-
   const options = {
     renderNode: {
       [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
@@ -86,6 +86,17 @@ const blogTemplate = ({ data }) => {
         <Link to="/blog" className="blog-goback">
           &lt; Go back
         </Link>
+        <div className="comments mt-12">
+          <DiscussionEmbed
+            shortname="nikvogrinecportfolio"
+            config={{
+              url: window.location.href,
+              identifier: blog.slug,
+              title: blog.title,
+              language: "en_US",
+            }}
+          />
+        </div>
       </article>
     </Layout>
   )
@@ -97,6 +108,7 @@ export const query = graphql`
       title
       timeToRead
       writter
+      slug
       date(formatString: "DD  MMMM, YYYY")
       childContentfulBlogBodyRichTextNode {
         json
