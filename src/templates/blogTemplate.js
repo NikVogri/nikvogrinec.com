@@ -7,7 +7,7 @@ import { DiscussionEmbed } from "disqus-react"
 import SiteMetadata from "../components/SiteMetadata"
 import Layout from "../layouts/Layout"
 
-import BlogAuthor from "../images/author.png"
+import BlogAuthor from "../images/author.jpg"
 
 import "../styles/sass/blog.scss"
 
@@ -90,7 +90,6 @@ const blogTemplate = ({ data }) => {
           <DiscussionEmbed
             shortname="nikvogrinecportfolio"
             config={{
-              url: window.location.href,
               identifier: blog.slug,
               title: blog.title,
               language: "en_US",
