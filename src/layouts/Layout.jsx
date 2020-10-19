@@ -13,13 +13,13 @@ import particleConfigDark from "../config/particlesDark"
 const Layout = ({ children }) => {
   const theme = useContext(myContext)
   useEffect(() => {
-    const darkModeEnabled = localStorage.getItem("dark-mode")
-    if (darkModeEnabled) {
-      theme.setDarkMode(true)
-      document.body.classList.add("dark-mode")
-      document.body.classList.remove("light-mode")
-    } else {
+    const lightModeEnabled = localStorage.getItem("light-mode")
+    if (lightModeEnabled) {
+      theme.setDarkMode(false)
       document.body.classList.add("light-mode")
+      document.body.classList.remove("dark-mode")
+    } else {
+      document.body.classList.add("dark-mode")
     }
   }, [theme])
 

@@ -27,13 +27,14 @@ const Navigation = () => {
   }, [])
 
   const toggleDarkMode = () => {
-    if (!theme.isDark) {
-      localStorage.setItem("dark-mode", true)
+    if (theme.isDark) {
+      localStorage.setItem("light-mode", true)
+      theme.setDarkMode(false)
     } else {
-      localStorage.removeItem("dark-mode")
+      localStorage.removeItem("light-mode")
+      theme.setDarkMode(true)
     }
 
-    theme.setDarkMode()
     document.body.classList.toggle("dark-mode")
     document.body.classList.toggle("light-mode")
   }
