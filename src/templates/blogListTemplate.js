@@ -40,8 +40,13 @@ const BlogPage = ({
         </p>
       </header>
       <hr />
-      <section className="md:grid grid-cols-3 gap-20 mt-8 py-5 ">
-        <div className="col-span-2 w-full ">
+      <section
+        className="md:grid grid-cols-3 gap-20 mt-8 py-5"
+        style={{
+          height: nodes.length < 1 ? "calc(100vh - (75px + 85px + 284px))" : "",
+        }}
+      >
+        <div className="col-span-2 w-full">
           {nodes.length < 1 && (
             <p className="no-found">No blogs found for this category...</p>
           )}
