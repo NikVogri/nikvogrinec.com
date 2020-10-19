@@ -45,7 +45,7 @@ const blogTemplate = ({ data }) => {
           <div className="flex items-center">
             <img src={BlogAuthor} alt={blog.writter} className="mr-3 w-full" />
             <div>
-              <p>written by {blog.writter}</p>
+              <p>{blog.writter}</p>
               <p>
                 {blog.date} · {blog.timeToRead} minute read
               </p>
