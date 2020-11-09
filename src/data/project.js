@@ -1,6 +1,6 @@
 export default [
   {
-    title: "Open Source Restaurant Managing System",
+    title: "Open Source Restaurant Management System",
     description: `Open Source project created to simplify restaurant order and inventory management.
      Manage items, categories, orders, coupons, view detailed sale reports, send messages to your staff, and much more all from the CMS.
       `,
@@ -54,7 +54,7 @@ export default [
       },
       {
         name: "Live Site",
-        url: "https://virus-corona-tracker.netlify.app/",
+        url: "virus-tracker.live",
       },
     ],
   },

@@ -3,6 +3,10 @@ import React, { useContext } from "react"
 import Title from "./Title"
 import Button from "./Button"
 
+import Headshot from '../images/author.jpg'
+
+
+
 import ThemeContext from "../Context/ThemeContext"
 
 import "../styles/sass/about.scss"
@@ -15,6 +19,7 @@ const About = () => {
     <section className="about  py-16 md:py-0 relative" id="about">
       <Title title="Get to know me" />
       <div className="about-long mb-5">
+        <img  src={Headshot} alt="Nik Vogrinec"/>
         <p className="mt-0">
           My name is Nik Vogrinec, and I come from a small country in the center
           of Europe called Slovenia. I found my passion for programming while

@@ -31,6 +31,25 @@
     line-height: 45px;
     font-size: 1.6rem;
     color: var(--text-color);
+    text-align: center;
+
+    @media only screen and (min-width: 786px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%; 
+
+      @media only screen and (min-width: 786px) {
+        margin-right: 40px;
+      }
+    }
+    
 
     @media only screen and(max-width: 768px) {
       line-height: 30px;
