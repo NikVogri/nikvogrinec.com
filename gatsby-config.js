@@ -36,7 +36,7 @@ module.exports = {
       },
     ],
     locale: "en",
-    title: `Nik Vogrinec Portfolio`,
+    title: `Nik Vogrinec`,
     description: `My name is Nik Vogrinec and I am full-stack web developer located in Slovenia. 
     I work with Laravel, PHP, Node, Express, React, Gatsby, CSS, JS, HTML5, MySQL, Bootstrap, and various others.`,
     author: `@nikvogrinec`,
@@ -79,7 +79,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nik Vogrinec Portfolio Site`,
+        name: `Nik Vogrinec`,
         short_name: `nikvogrinecportfolio`,
         start_url: `/`,
         background_color: `#ffffff`,

@@ -36,7 +36,7 @@ const blogTemplate = ({ data }) => {
   return (
     <Layout>
       <SiteMetadata
-        title={`${blog.title} | Nik Vogrinec`}
+        title={`${blog.title}`}
         description={blog.excerpt.excerpt}
       />
       <article className="container blog-single">
