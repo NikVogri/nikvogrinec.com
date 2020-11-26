@@ -96,5 +96,12 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-T7NM8QD",
+        includeInDevelopment: false,
+      },
+    },
   ],
 }
