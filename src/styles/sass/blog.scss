@@ -107,6 +107,10 @@
           transition: .1s ease-in;
           background-color: rgba(47, 128, 237, 0.6);
         }
+        @media only screen and (max-width: 768px) {
+          text-decoration: underline;
+          color: rgba(47, 128, 237, 1);
+        }
       }
 
       h3 {
