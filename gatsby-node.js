@@ -12,6 +12,7 @@ const createSpecificBlogPages = async (graphql, createPage) => {
         edges {
           node {
             slug
+            updatedAt
           }
         }
       }
@@ -24,6 +25,7 @@ const createSpecificBlogPages = async (graphql, createPage) => {
       component: path.resolve("./src/templates/blogTemplate.js"),
       context: {
         slug: node.slug,
+        lastModifiedDate: node.updatedAt,
       },
     })
   })
