@@ -22,16 +22,12 @@
       margin-left: 0.5rem;
     }
   }
-
-
-
-
   &-long {
     font-weight: 400;
     line-height: 45px;
     font-size: 1.6rem;
     color: var(--text-color);
-    text-align: center;
+    text-align: left;
 
     @media only screen and (min-width: 786px) {
       display: flex;
@@ -41,11 +37,14 @@
     }
 
     img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%; 
+      border-radius: 5px;
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0.25); 
+      width: 100%;
+      height: auto;
 
       @media only screen and (min-width: 786px) {
+        width: 250px;
+        height: 250px;
         margin-right: 40px;
       }
     }
@@ -53,7 +52,6 @@
 
     @media only screen and(max-width: 768px) {
       line-height: 30px;
-      font-size: 1.4rem;
     }
 
     span {

@@ -54,7 +54,7 @@ export default [
       },
       {
         name: "Live Site",
-        url: "virus-tracker.live",
+        url: "https://virus-tracker.live/",
       },
     ],
   },

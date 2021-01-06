@@ -3,33 +3,28 @@ import React, { useContext } from "react"
 import Title from "./Title"
 import Button from "./Button"
 
-import Headshot from '../images/author.jpg'
-
-
+import Headshot from "../images/author.jpg"
 
 import ThemeContext from "../Context/ThemeContext"
 
 import "../styles/sass/about.scss"
 
 const About = () => {
-  const data = useContext(ThemeContext)
-  console.log(data)
-
   return (
     <section className="about  py-16 md:py-0 relative" id="about">
       <Title title="Get to know me" />
       <div className="about-long mb-5">
-        <img  src={Headshot} alt="Nik Vogrinec"/>
+        <img src={Headshot} alt="Nik Vogrinec" />
         <p className="mt-0">
-          My name is Nik Vogrinec, and I come from a small country in the center
-          of Europe called Slovenia. I found my passion for programming while
+          Hi! I'm Nik Vogrinec, and I come from a small country in the center of
+          Europe called Slovenia. I found my passion for programming while
           browsing the web and wondering how websites work. I specialize in
           full-stack web development, so I spend most of my days designing and
           coding applications in Laravel and NodeJS on the backend and React and
           Vue on the front end. I style my applications with custom CSS,
-          Bootstrap, or Tailwind. My favourite programming languages are PHP and
-          Javascript. I put a lot of time and energy in learning as much as I
-          can every single day. So, what do you think? Let's have a chat?
+          Bootstrap, or Tailwind. I put a lot of time and energy in learning as
+          much as I can every single day. So, what do you think? Let's have a
+          chat?
         </p>
       </div>
       <ul className="list-none flex align-center socials m-0 p-0">
@@ -61,7 +56,7 @@ const About = () => {
             <p>LinkedIn</p>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +78,7 @@ const About = () => {
             </svg>
             <p>Resume (Coming soon)</p>
           </a>
-        </li>
+        </li> */}
       </ul>
 
       <div className="text-center button-container">
