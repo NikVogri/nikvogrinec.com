@@ -1,5 +1,5 @@
 # Portfolio
-
+![alt text](https://i.ibb.co/dW2b8mb/portfolio.png)
 ## Technology List
 -   Gatsby
 -   Contentful headless CMS
@@ -10,6 +10,12 @@
 2. Run ```yarn``` or ```npm install```
 3. Create a .env file by running ```cp .env.example .env```
 4. Update ENV variables with your contentful and google tag credentials
+
+## Features
+- Blog system
+- Visitor statistics
+- Dark / Light mode
+- SEO optimized
 
 ## ENV variables
 ```
