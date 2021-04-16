@@ -19,8 +19,8 @@ const Hero = () => {
       <div className="md:flex items-center mt-8 lg:mt-0">
         <div className="md:w-1/2 w-full relative">
           <h1>
-            <span className="block">Welcome, welcome, welcome!</span>I design &
-            build full-stack web application & I love learning new technologies.
+            <span className="block">Welcome, welcome, welcome!</span>I'm Nik
+            and I design & build full-stack web application
           </h1>
         </div>
 
@@ -29,20 +29,20 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-long mt-8  md:mt-16 relative">
-        <p>
+        {/* <p>
           Hi, and welcome to my portfolio website. I spend my time designing and
           developing real-world web applications that make people's lives just a
           bit easier in any way I can. I started this journey a couple of years
           ago but got fully invested into it more than a year ago. I work with
           various technologies both in front-end and back-end.
-          {/* Hello, and
+          Hello, and
           welcome to my website. I spend my time designing and developing{" "}
           <span>real-world web applications</span> that make people's lives
           easier in any way I can. I started this journey a couple of years ago
           but got fully invested into it more <span>than a year ago</span>. I
           work with with many technologies both in <span>front-end</span> and{" "}
-          <span>back-end</span>. */}
-        </p>
+          <span>back-end</span>.
+        </p> */}
       </div>
     </section>
   )
