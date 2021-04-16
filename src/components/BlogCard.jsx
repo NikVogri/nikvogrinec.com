@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const BlogCard = ({ title, image, date, description, link, className }) => {
   return (
     <div
-      className={`shadow-md rounded-lg overflow-hidden card hover:shadow-lg transition-all duration-500 ${
+      className={`shadow-2xl rounded-lg overflow-hidden card hover:shadow-md transition-all duration-500 ${
         className ? className : ""
       }`}
     >
@@ -17,7 +17,7 @@ const BlogCard = ({ title, image, date, description, link, className }) => {
       </div>
       <div className="card-info p-8">
         <Link to={link}>
-          <p className="my-4 card-title">{title}</p>
+          <p className="my-4 card-title hover:underline transition-all duration-500">{title}</p>
         </Link>
         <span className="mt-3 inline-block">{date}</span>
         <p className="my-12">{description}</p>
