@@ -1,60 +1,63 @@
-  .card {
+.card {
+  background-color: var(--background-color);
+  border: solid 2px var(--secondary-background);
 
-    background-color: var(--background-color);
-
-    .card-image-container {
-      img {
-        width: 100%;
-        height: 20rem;
-        object-fit: cover;
-      }
+  .card-image-container {
+    img {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
     }
+  }
 
-    .card-info {
+  .card-info {
+    color: var(--text-color);
+
+    .card-title {
       color: var(--text-color);
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
 
-      .card-title {
-        color: var(--text-color);
-        font-size: 2.4rem;
-        font-weight: 500;
-      }
+    span {
+      font-size: 1.2rem;
+      position: relative;
 
-      span {
-        font-size: 1.2rem;
-        position: relative;
-
-        &::before {
-          content: "";
-          height: 2px;
-          background-color: var(--primary-color);
-          width: 100%;
-          position: absolute;
-          left: 0;
-          bottom: -0.5rem;
-        }
-      }
-
-      p {
-        font-size: 1.4rem;
-        line-height: 24px;
-      }
-
-      a {
-
-        color: var(--primary-color) !important;
-        font-size: 1.4rem;
-        border: none !important;
-        font-weight: 500;
+      &::before {
+        content: "";
+        height: 2px;
+        background-color: var(--primary-color);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
       }
     }
 
-    &.card-big {
-      .card-image-container {
-        img {
-          width: 100% !important;
-          max-height: 50rem;
-          height: auto;
-        }
+    p {
+      font-size: 1.4rem;
+      line-height: 24px;
+    }
+
+    a {
+      color: var(--primary-color) !important;
+      font-size: 1.4rem;
+      border: none !important;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
+
+  &.card-big {
+    .card-image-container {
+      img {
+        width: 100% !important;
+        max-height: 50rem;
+        height: auto;
+      }
+    }
+  }
+}
