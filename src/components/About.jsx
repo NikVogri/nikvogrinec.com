@@ -1,11 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 
 import Title from "./Title"
 import Button from "./Button"
 
 import Headshot from "../images/author.jpg"
-
-import ThemeContext from "../Context/ThemeContext"
 
 import "../styles/sass/about.scss"
 
@@ -14,18 +12,28 @@ const About = () => {
     <section className="about  py-16 md:py-0 relative" id="about">
       <Title title="Get to know me" />
       <div className="about-long mb-5">
-        <img src={Headshot} alt="Nik Vogrinec" />
-        <p className="mt-0">
-          Hi! I'm Nik Vogrinec, and I come from a small country in the center of
-          Europe called Slovenia. I found my passion for programming while
-          browsing the web and wondering how websites work. I specialize in
-          full-stack web development, so I spend most of my days designing and
-          coding applications in Laravel and NodeJS on the backend and React and
-          Vue on the front end. I style my applications with custom CSS,
-          Bootstrap, or Tailwind. I put a lot of time and energy in learning as
-          much as I can every single day. So, what do you think? Let's have a
-          chat?
-        </p>
+        {/* <img src={Headshot} alt="Nik Vogrinec" /> */}
+        <div>
+          <p className="mt-0">
+            I'm Nik Vogrinec, and I come from a small country called Slovenia. I
+            have over 2 years of professional experience in full-stack web
+            development and I have worked on numerous projects over the years
+            both on the back-end and the front-end.
+          </p>
+          <p>
+            I spend most of my days designing and coding applications in and
+            NodeJS and PHP on the back-end, React and Vue on the front-end. I
+            style my applications with custom CSS, Sass, Bootstrap, or Tailwind.
+            I put a lot of time and energy in learning as much as I can every
+            single day.
+          </p>
+          <p>
+            I currently work as a freelance developer on platforms like Upwork
+            where I am one of the top rated developers with a 100% job success
+            rate, as well as part-time for a local company specializing in web
+            applications. So, what do you think? Let's have a chat?
+          </p>
+        </div>
       </div>
       <ul className="list-none flex align-center socials m-0 p-0">
         <li>
