@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer py-8 md:py-12">
       <div className=" container md:items-center md:flex md:justify-between text-center">
         <p className="m-0 mb-2 md:mb-0">Made in Slovenia</p>
-        <p className="m-0 mb-6 md:mb-0">Copyright 2020. Nik Vogrinec</p>
+        <p className="m-0 mb-6 md:mb-0">Copyright {new Date().getFullYear()}. Nik Vogrinec</p>
         <div className="flex items-center justify-center">
           <a href="https://www.linkedin.com/in/nik-vogrinec/">
             <img src={FaLinkedin} alt="Linkedin" />
