@@ -3,8 +3,6 @@ import React from "react"
 import Title from "./Title"
 import Button from "./Button"
 
-import Headshot from "../images/author.jpg"
-
 import "../styles/sass/about.scss"
 
 const About = () => {
