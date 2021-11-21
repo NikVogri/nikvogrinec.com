@@ -1,10 +1,10 @@
 export default {
   particles: {
     number: {
-      value: 10,
+      value: 100,
       density: {
         enable: true,
-        value_area: 1000,
+        value_area: 950,
       },
     },
     color: {
@@ -21,11 +21,11 @@ export default {
       },
     },
     opacity: {
-      value: 0.5,
+      value: 0.35,
       random: false,
       anim: {
         enable: false,
-        speed: 1,
+        speed: 100,
         opacity_min: 0.1,
         sync: false,
       },
@@ -35,7 +35,7 @@ export default {
       random: true,
       anim: {
         enable: false,
-        speed: 40,
+        speed: 5,
         size_min: 0.1,
         sync: false,
       },
@@ -44,12 +44,12 @@ export default {
       enable: true,
       distance: 150,
       color: "#333",
-      opacity: 0.4,
+      opacity: 0.15,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 1,
+      speed: 0.5,
       direction: "none",
       random: true,
       straight: false,
@@ -86,8 +86,8 @@ export default {
         distance: 400,
         size: 40,
         duration: 2,
-        opacity: 8,
-        speed: 3,
+        opacity: 15,
+        speed: 0.5,
       },
       repulse: {
         distance: 200,

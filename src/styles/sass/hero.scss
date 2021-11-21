@@ -1,35 +1,58 @@
 .hero {
   color: var(--text-color);
   position: relative;
-  margin: 10rem 0;
+  padding: 7.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 
   @media only screen and (max-width: 640px) {
     margin: 4rem 0;
   }
 
-  img {
-    @media only screen and (min-width: 1024px) {
-      width: 75%;
-    }
-
-    width: 100%;
-    height: auto;
-  }
-
   h1 {
     font-size: 3.4rem;
-    font-weight: 500;
+    font-weight: 700;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textBackgroundAnimation 15s infinite;
 
-    @media only screen and (max-width: 1024px) {
-      font-size: 2.5rem;
+    font-weight: bold;
+
+    span:first-of-type {
+      margin-bottom: 0.5rem;
+      font-size: clamp(60px, 80px, 100px);
+      display: block;
+
+      @media only screen and (max-width: 640px) {
+        font-size: clamp(40px, 65px, 80px);
+      }
+
+      @media only screen and (max-width: 510px) {
+        font-size: clamp(35px, 55px, 70px);
+      }
     }
 
-    span {
-      color: var(--primary-color);
+    span:last-of-type {
+      font-size: clamp(40px, 50px, 60px);
+
+      @media only screen and (max-width: 640px) {
+        font-size: clamp(30px, 40px, 50px);
+      }
+
+      @media only screen and (max-width: 510px) {
+        font-size: clamp(20px, 35px, 45px);
+      }
+    }
+
+    &[data-bg="dark"] {
+      background-image: url("../../../static/glossy.jpg");
+    }
+
+    &[data-bg="light"] {
+      background-image: url("../../../static/glossy2.jpeg");
     }
   }
 
@@ -46,7 +69,6 @@
       color: var(--primary-color);
     }
   }
-
 
   @mixin bgDefault() {
     position: absolute;
@@ -83,5 +105,22 @@
       right: 100%;
     }
   }
+}
 
+@keyframes textBackgroundAnimation {
+  0% {
+    background-position: top center;
+  }
+  50% {
+    background-position: center center;
+  }
+  50% {
+    background-position: bottom center;
+  }
+  75% {
+    background-position: center center;
+  }
+  100% {
+    background-position: top center;
+  }
 }

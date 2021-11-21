@@ -1,9 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { myContext } from "../Context/ThemeContext"
+
+import Particles from "react-particles-js"
+
+import particleConfigLight from "../config/particlesLight"
+import particleConfigDark from "../config/particlesDark"
 
 import "../styles/sass/hero.scss"
 
 const Hero = () => {
+  const { isDark } = useContext(myContext)
+
   const {
     allFile: { publicURL: heroImage },
   } = useStaticQuery(graphql`
@@ -13,37 +21,28 @@ const Hero = () => {
       }
     }
   `)
-
   return (
     <section className="hero relative" id="hero">
-      <div className="md:flex items-center mt-8 lg:mt-0">
-        <div className="md:w-1/2 w-full relative">
-          <h1>
-            <span className="block">Welcome, welcome, welcome!</span>I'm Nik
-            and I design & build full-stack web application
-          </h1>
-        </div>
-
-        <div className="md:w-1/2 w-full">
-          <img src={heroImage} alt="hero" className="md:float-right" />
-        </div>
+      <Particles
+        className="particles hidden md:block"
+        params={isDark ? particleConfigDark : particleConfigLight}
+      />
+      <div className="text-center mt-8 lg:mt-0 lg:w-8/12 mx-auto">
+        <h1 className="text-center" data-bg={isDark ? "dark" : "light"}>
+          <span>Hi, I'm Nik!</span>
+          <span>I design & build full-stack web applications</span>
+        </h1>
       </div>
-      <div className="hero-long mt-8  md:mt-16 relative">
-        {/* <p>
-          Hi, and welcome to my portfolio website. I spend my time designing and
-          developing real-world web applications that make people's lives just a
-          bit easier in any way I can. I started this journey a couple of years
-          ago but got fully invested into it more than a year ago. I work with
-          various technologies both in front-end and back-end.
-          Hello, and
+      {/* <div className="hero-long mt-8  md:mt-16 relative">
+        <p>
           welcome to my website. I spend my time designing and developing{" "}
           <span>real-world web applications</span> that make people's lives
           easier in any way I can. I started this journey a couple of years ago
           but got fully invested into it more <span>than a year ago</span>. I
           work with with many technologies both in <span>front-end</span> and{" "}
           <span>back-end</span>.
-        </p> */}
-      </div>
+        </p>
+      </div> */}
     </section>
   )
 }
