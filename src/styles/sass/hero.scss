@@ -17,8 +17,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    -webkit-box-direction-break: clone;
     animation: textBackgroundAnimation 15s infinite;
-
+    display: inline-block;
     font-weight: bold;
 
     span:first-of-type {
