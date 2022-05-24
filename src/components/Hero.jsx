@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { myContext } from "../Context/ThemeContext"
 
 import Particles from "react-particles-js"
@@ -12,15 +11,6 @@ import "../styles/sass/hero.scss"
 const Hero = () => {
   const { isDark } = useContext(myContext)
 
-  const {
-    allFile: { publicURL: heroImage },
-  } = useStaticQuery(graphql`
-    query {
-      allFile: file(name: { eq: "hero-image" }) {
-        publicURL
-      }
-    }
-  `)
   return (
     <section className="hero relative" id="hero">
       <Particles
