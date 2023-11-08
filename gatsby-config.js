@@ -2,21 +2,12 @@ require("dotenv").config({
   path: "./config.env",
 })
 
-const {
-  CONTENTFUL_SPACE_ID,
-  CONTENTFUL_ACCESS_TOKEN,
-  TAG_MANAGER_ID,
-  TRACKING_ID,
-} = process.env
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
 if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
   throw new Error(
     "Contentful spaceId and the access token need to be provided."
   )
-}
-
-if (!TAG_MANAGER_ID || !TRACKING_ID) {
-  throw new Error("Provide tag manager key and google analytics tracking id.")
 }
 
 module.exports = {
@@ -104,20 +95,6 @@ module.exports = {
         theme_color: `#2f80ed`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: TAG_MANAGER_ID,
-        includeInDevelopment: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: TRACKING_ID,
-        head: false,
       },
     },
     {
