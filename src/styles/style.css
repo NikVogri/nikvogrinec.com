@@ -4,6 +4,32 @@ html {
   font-size: 62.5%;
 }
 
+html.dark-mode {
+  /* transition: all 0.5s ease-in-out; */
+  --primary-color: #2f80ed;
+  --text-color: #fff;
+  --bg-shape: rgba(255, 255, 255, 0.2);
+  --horizontal-ruling: rgba(255, 255, 255, 0.1);
+  --primary-button: rgba(47, 128, 237, 1);
+  --background-color: #1b1b2f;
+  --secondary-color: #fff;
+  --secondary-background: #002658;
+  --shape-opacity: 0.05;
+}
+
+html.light-mode {
+  /* transition: all 0.5s ease-in-out; */
+  --primary-color: #2f80ed;
+  --secondary-color: #fff;
+  --text-color: #000;
+  --bg-shape: #0000000d;
+  --shape-opacity: 0.05;
+  --horizontal-ruling: rgba(87, 88, 90, 0.1);
+  --primary-button: rgba(47, 128, 237, 0.5);
+  --background-color: #fff;
+  --secondary-background: #2f80ed;
+}
+
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
@@ -19,32 +45,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-body.dark-mode {
-  /* transition: all 0.5s ease-in-out; */
-  --primary-color: #2f80ed;
-  --text-color: #fff;
-  --bg-shape: rgba(255, 255, 255, 0.2);
-  --horizontal-ruling: rgba(255, 255, 255, 0.1);
-  --primary-button: rgba(47, 128, 237, 1);
-  --background-color: #1b1b2f;
-  --secondary-color: #fff;
-  --secondary-background: #002658;
-  --shape-opacity: 0.05;
-}
-
-body.light-mode {
-  /* transition: all 0.5s ease-in-out; */
-  --primary-color: #2f80ed;
-  --secondary-color: #fff;
-  --text-color: #000;
-  --bg-shape: #0000000d;
-  --shape-opacity: 0.05;
-  --horizontal-ruling: rgba(87, 88, 90, 0.1);
-  --primary-button: rgba(47, 128, 237, 0.5);
-  --background-color: #fff;
-  --secondary-background: #2f80ed;
 }
 
 hr {

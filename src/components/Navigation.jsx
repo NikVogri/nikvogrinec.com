@@ -35,8 +35,8 @@ const Navigation = () => {
       theme.setDarkMode(true)
     }
 
-    document.body.classList.toggle("dark-mode")
-    document.body.classList.toggle("light-mode")
+    document.documentElement.classList.toggle("dark-mode")
+    document.documentElement.classList.toggle("light-mode")
   }
 
   const { site } = useStaticQuery(graphql`
