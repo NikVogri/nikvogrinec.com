@@ -18,12 +18,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SiteMetadata
-        title="Nik Vogrinec Portfolio"
-        description="Portfolio for full stack web developer Nik Vogrinec located in Slovenia."
+        title="Nik Vogrinec"
+        description="Nik Vogrinec, a full-stack web developer based in Slovenia."
       />
       <Hero />
-      <Projects />
-      <hr />
+      {/* <Projects /> */}
       <About />
       <hr />
       <BlogCards />

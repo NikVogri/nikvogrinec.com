@@ -13,24 +13,36 @@ const About = () => {
         {/* <img src={Headshot} alt="Nik Vogrinec" /> */}
         <div>
           <p className="mt-0">
-            I'm Nik Vogrinec, and I come from a small country called Slovenia. I
-            have over 2 years of professional experience in full-stack web
-            development and I have worked on numerous projects over the years
-            both on the back-end and the front-end.
+            I'm Nik Vogrinec, a software developer based in Slovenia. Over the
+            course of four years as a professional developer, I've actively
+            participated in numerous projects, adeptly managing tasks across
+            both <strong>back-end</strong> and <strong>front-end</strong>{" "}
+            development all of which included{" "}
+            <strong>manual end-to-end testing</strong>,{" "}
+            <strong>writing tests</strong>, and implementation of 3rd party
+            integrations including <strong>PayPal</strong>,{" "}
+            <strong>YouTube</strong>, <strong>Twitch</strong>, and{" "}
+            <strong>Discord</strong> as well as{" "}
+            <strong>writing API endpoints</strong> in NodeJS that are used every
+            day by thousands of people.
           </p>
           <p>
-            I spend most of my days designing and coding applications in and
-            NodeJS and PHP on the back-end, React and Vue on the front-end. I
-            style my applications with custom CSS, Sass, Bootstrap, or Tailwind.
-            I put a lot of time and energy in learning as much as I can every
-            single day.
+            As a <strong>freelancer</strong> on Upwork, I've achieved a
+            top-rated status, showcasing a flawless 100% job success and client
+            satisfaction rate. My profile is among the 5% top-rated profiles on
+            the Upwork platform, maintaining a pristine 100% rating.
           </p>
           <p>
-            I currently work as a freelance developer on platforms like Upwork
-            where I am one of the top rated developers with a 100% job success
-            rate, as well as part-time for a local company specializing in web
-            applications. So, what do you think? Let's have a chat?
+            Typically, I spend my days designing and coding applications using{" "}
+            <strong>NodeJS</strong> and <strong>Golang</strong> for the backend,
+            alongside <strong>React</strong> and <strong>Vue</strong> for the
+            frontend. I customize the look of my applications with custom{" "}
+            <strong>CSS</strong>, <strong>Bootstrap</strong>, or{" "}
+            <strong>Tailwind</strong>. I'm consistently dedicated to learning
+            and invest time and effort into broadening my skill set every single
+            day.
           </p>
+          <p>So, what do you think? Let's have a chat?</p>
         </div>
       </div>
       <ul className="list-none flex align-center socials m-0 p-0">
