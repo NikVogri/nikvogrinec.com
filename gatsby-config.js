@@ -14,7 +14,6 @@ module.exports = {
   siteMetadata: {
     menu: [
       { name: "HOME", to: "/" },
-      { name: "PROJECTS", to: "/#projects" },
       { name: "ABOUT", to: "/#about" },
       { name: "BLOG", to: "/blog" },
     ],
